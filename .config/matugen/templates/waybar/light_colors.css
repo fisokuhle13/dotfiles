@@ -1,0 +1,15 @@
+/* ------------------------*/
+/* Matugen Generated - Light */
+/* ------------------------*/
+
+/* Core colors from Matugen JSON */
+@define-color bg_main {{colors.surface.light.hex}};            /* Background */
+@define-color text_main {{colors.on_surface.light.hex}};       /* Main text */
+@define-color accent {{colors.primary.light.hex}};             /* Accent / highlight */
+
+/* Functional colors */
+@define-color battery_critical {{colors.red.light.hex}};
+@define-color battery_charging {{colors.green.light.hex}};
+
+/* Overlay / translucent effects */
+@define-color overlay rgba(0,0,0,0.1);  /* subtle dark overlay on light bg */

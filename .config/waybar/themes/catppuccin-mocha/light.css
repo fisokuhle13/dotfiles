@@ -1,0 +1,11 @@
+/* ------------------------*/
+/* Catppuccin Mocha - Soft Light */
+/* ------------------------*/
+
+@define-color bg_main   #f2f2f6; /* off-white with lavender tint */
+@define-color text_main #4c4f69; /* Catppuccin Latte text, dark gray with lavender softness */
+@define-color accent    #b99de9; /* softened mauve */
+
+@define-color battery_critical #f38ba8; /* Mocha red */
+@define-color battery_charging #a6e3a1; /* Mocha green */
+@define-color overlay rgba(30,30,46,0.06); /* subtle Mocha shadow */

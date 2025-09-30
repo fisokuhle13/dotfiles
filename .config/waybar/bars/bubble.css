@@ -1,0 +1,129 @@
+/* -----------------------------------------------------
+ * Import
+ * ----------------------------------------------------- */
+
+@import "./colors.css";
+
+/* -----------------------------------------------------
+ * General
+ * ----------------------------------------------------- */
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+}
+
+window#waybar {
+  background: none;
+}
+
+/* -----------------------------------------------------
+ * Workspaces
+ * ----------------------------------------------------- */
+#workspaces {
+  background-color: @bg_main;
+  color: @text_main;
+  margin: 0 16px 0 0;
+  padding: 0 8px;
+  border-radius: 24px;
+
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+#workspaces button {
+  color: @text_main;
+  margin: 4px;
+  padding: 0 10px;
+  background: @accent;
+  opacity: 0.5;
+  border-radius: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+  padding: 0 10px;
+  border: 2px solid @accent;
+}
+
+#workspaces button.active {
+  background: @accent;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+/* -----------------------------------------------------
+ * Taskbar, CPU, Memory, Pulseaudio, Network
+ * ----------------------------------------------------- */
+#taskbar,
+#cpu,
+#memory,
+#pulseaudio,
+#network {
+  background-color: @bg_main;
+  color: @text_main;
+  margin: 0 16px 0 0;
+  padding: 0 16px;
+  border-radius: 24px;
+
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+#battery {
+  margin: 0 16px 0 0;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 24px;
+  background-color: @bg_main;
+}
+
+#battery.discharging {
+  color: @text_main;
+}
+
+#battery.critical {
+  color: @battery_critical;
+}
+
+#battery.charging {
+  color: @battery_charging;
+}
+
+#power-profiles-daemon {
+  font-size: 16px;
+  min-width: 32px;
+  color: @text_main;
+}
+
+/* -----------------------------------------------------
+ * Clock
+ * ----------------------------------------------------- */
+#clock {
+  background-color: @bg_main;
+  border: 2px solid @accent;
+  color: @accent;
+  margin: 0 0 0 16px;
+  padding: 0 14px;
+  border-radius: 24px;
+
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+/* -----------------------------------------------------
+ * Taskbar adjustments
+ * ----------------------------------------------------- */
+#taskbar {
+  padding: 0 8px;
+}
+
+#taskbar.empty {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}

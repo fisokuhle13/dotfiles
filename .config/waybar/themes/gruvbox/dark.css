@@ -1,0 +1,10 @@
+/* ------------------------*/
+/* Gruvbox Dark            */
+/* ------------------------*/
+
+@define-color bg_main #282828;
+@define-color text_main #ebdbb2;
+@define-color accent #d79921; /* yellow accent */
+@define-color battery_critical #cc241d; /* red */
+@define-color battery_charging #98971a; /* green */
+@define-color overlay rgba(255,255,255,0.1);

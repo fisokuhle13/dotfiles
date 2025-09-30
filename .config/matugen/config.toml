@@ -1,0 +1,46 @@
+[config]
+
+[config.custom_colors]
+green = { color = "#00ff00", blend = true }
+red   = { color = "#ff0000", blend = true }
+blue   = { color = "#0000ff", blend = true }
+orange = { color = "#ffa500", blend = true }
+gold   = { color = "#ffd700", blend = true }
+yellow    = { color = "#ffff00", blend = true }
+purple    = { color = "#800080", blend = true }
+cyan      = { color = "#00ffff", blend = true }
+magenta   = { color = "#ff00ff", blend = true }
+pink      = { color = "#ffc0cb", blend = true }
+brown     = { color = "#8b4513", blend = true }
+gray      = { color = "#808080", blend = true }
+lightgray = { color = "#d3d3d3", blend = true }
+black     = { color = "#000000", blend = true }
+white     = { color = "#ffffff", blend = true }
+
+[templates.waybar_dark]
+input_path = '~/.config/matugen/templates/waybar/dark_colors.css'
+output_path = '~/.config/waybar/themes/matugen/dark.css'
+
+[templates.waybar_light]
+input_path = '~/.config/matugen/templates/waybar/light_colors.css'
+output_path = '~/.config/waybar/themes/matugen/light.css'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi/colors_conf.rasi'
+output_path = '~/.config/rofi/themes/matugen.rasi'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty/colors.conf'
+output_path = '~/.config/kitty/themes/matugen.conf'
+
+[templates.wlogout]
+input_path = '~/.config/matugen/templates/wlogout/color.css'
+output_path = '~/.config/wlogout/themes/matugen.css'
+
+[templates.hypr]
+input_path = '~/.config/matugen/templates/hypr-gen/hypr-gen.conf'
+output_path = '~/dotfiles/global/hypr-general/matugen.conf'
+
+[templates.nvim]
+input_path = '~/.config/matugen/templates/nvim/matugen.lua'
+output_path = '~/.config/nvim/lua/themes/utils/matugen-palette.lua'

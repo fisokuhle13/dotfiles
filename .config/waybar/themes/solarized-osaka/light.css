@@ -1,0 +1,10 @@
+/* ------------------------*/
+/* ligh Solirized Osaka */
+/* ------------------------*/
+
+@define-color bg_main #ffffff; /* light background */
+@define-color text_main #063642; /* dark/blue text */
+@define-color accent #b58900; /* accent stays same */
+@define-color battery_critical rgba(238,46,36,1); /* red stays red */
+@define-color battery_charging #2ad55c; /* green stays green */
+@define-color overlay rgba(0,0,0,0.1); /* subtle dark overlay instead of light */
