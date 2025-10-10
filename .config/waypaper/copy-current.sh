@@ -20,7 +20,7 @@ mkdir -p "$HOME/dotfiles/global"
 # Convert to PNG if not already PNG
 EXT="${WALLPAPER##*.}"
 if [ "$EXT" != "png" ]; then
-  magick convert "$WALLPAPER" "$DEST"
+  magick "$WALLPAPER" "$DEST"
 else
   cp "$WALLPAPER" "$DEST"
 fi

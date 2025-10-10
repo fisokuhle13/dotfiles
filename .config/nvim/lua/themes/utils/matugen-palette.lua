@@ -1,49 +1,49 @@
 local palette = {
 	-- Base Colors (High Contrast, Immersive)
-	fg = "#e5e1e9",
-	bg = "#141318",
-	cursorln = "#2a292f",
-	surface_low = "#1c1b20",
-	surface_variant = "#c9c5d0",
-	surface_bright = "#3a383e", -- New: Bright UI surfaces
+	fg = "#e9e2d4",
+	bg = "#16130b",
+	cursorln = "#2d2a21",
+	surface_low = "#1e1b13",
+	surface_variant = "#cec6b4",
+	surface_bright = "#3d392f", -- New: Bright UI surfaces
 
 	-- Primary & Accent (Dynamic, Vibrant)
-	primary = "#c8bfff",
-	accent = "#473f77",
-	secondary = "#c9c3dc",
-	tertiary = "#ecb8ce",
-	visual = "#474459",
-	highlight = "#613b4d", -- New: For brackets, popups
+	primary = "#e1c46d",
+	accent = "#574500",
+	secondary = "#d4c5a1",
+	tertiary = "#accfaf",
+	visual = "#50462a",
+	highlight = "#2f4e35", -- New: For brackets, popups
 
 	-- Syntax Colors (Semantic, Distinct)
-	comment = "#c9c5d0",
-	keyword = "#c8bfff",
-	string = "#95d5a7",
-	func = "#ecb8ce",
-	variable = "#e5e1e9",
-	constant = "#ffb2b9",
-	type = "#c9c3dc",
-	operator = "#c8bfff",
-	bracket = "#613b4d",
+	comment = "#cec6b4",
+	keyword = "#e1c46d",
+	string = "#b7d085",
+	func = "#accfaf",
+	variable = "#e9e2d4",
+	constant = "#ffb595",
+	type = "#d4c5a1",
+	operator = "#e1c46d",
+	bracket = "#2f4e35",
 
 	-- Diagnostics (Clear, Visually Distinct)
 	error = "#ffb4ab",
-	warning = "#ffb2b9",
-	info = "#c3c0ff",
-	hint = "#474459",
+	warning = "#ffb595",
+	info = "#cebdfe",
+	hint = "#50462a",
 
 	-- Git Integration (Semantic, Bold)
-	git_add = "#95d5a7",
-	git_change = "#ecb8ce",
-	git_delete = "#ffb2b9",
+	git_add = "#b7d085",
+	git_change = "#accfaf",
+	git_delete = "#ffb595",
 
 	-- UI Elements (Polished, Immersive)
-	border = "#928f99",
-	selection = "#473f77",
-	cursor = "#c8bfff",
-	statusline = "#474459", -- New: Statusline background
-	tabline = "#1c1b20", -- New: Bufferline background
-	active_tab = "#c8bfff", -- New: Active tab highlight
+	border = "#979080",
+	selection = "#574500",
+	cursor = "#e1c46d",
+	statusline = "#50462a", -- New: Statusline background
+	tabline = "#1e1b13", -- New: Bufferline background
+	active_tab = "#e1c46d", -- New: Active tab highlight
 }
 
 return palette

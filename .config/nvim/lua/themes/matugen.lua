@@ -1,146 +1,108 @@
--- Catppuccin Theme with Matugen Palette Integration
-local status, palette = pcall(require, "themes.utils.matugen-palette")
-if not status then
-	vim.notify("Error loading matugen-palette: " .. palette, vim.log.levels.ERROR)
-	return {}
-end
+-- .cache/wal/colors-wal.vim
 
 return {
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		lazy = false,
-		priority = 1000,
-		opts = {
-			flavour = "mocha",
-			background = { light = "latte", dark = "mocha" },
-			transparent_background = true, -- Keep main editor transparent
-			show_end_of_buffer = false,
-			term_colors = false,
-			dim_inactive = { enabled = false },
-			no_italic = false,
-			no_bold = false,
-			no_underline = false,
-			styles = {
-				comments = { "italic" },
-				conditionals = { "italic" },
-				loops = {},
-				functions = {},
-				keywords = {},
-				strings = {},
-				variables = {},
-				numbers = {},
-				booleans = {},
-				properties = {},
-				types = {},
-				operators = {},
-			},
+	"uZer/pywal16.nvim",
+	config = function()
+		local pywal16_core = require("pywal16.core")
+		local colors = pywal16_core.get_colors()
 
-			-- Map matugen colors to Catppuccin's palette
-			color_overrides = {
-				mocha = {
-					-- Base colors
-					base = palette.bg,
-					mantle = palette.cursorln,
-					crust = palette.cursorln,
+		-- Custom highlights for various plugins
+		local function setup_custom_highlights()
+			-- Basic Editor Highlights
+			vim.api.nvim_set_hl(0, "Normal", { bg = colors.color0, fg = colors.foreground })
+			vim.api.nvim_set_hl(0, "Cursor", { fg = colors.color0, bg = colors.cursor })
+			vim.api.nvim_set_hl(0, "CursorLine", { bg = colors.color8 })
+			vim.api.nvim_set_hl(0, "Visual", { bg = colors.color12 })
 
-					-- Text colors
-					text = palette.fg,
-					subtext0 = palette.comment,
-					subtext1 = palette.fg,
+			-- NOTE: Handled By Pywal - only work on what it can not do
+			-- -- Comment and syntax
+			-- vim.api.nvim_set_hl(0, "Comment", { fg = colors.color7, italic = true })
+			-- vim.api.nvim_set_hl(0, "Function", { fg = colors.color4, bold = true })
+			-- vim.api.nvim_set_hl(0, "String", { fg = colors.color2 })
+			-- vim.api.nvim_set_hl(0, "Constant", { fg = colors.color3 })
 
-					-- Primary colors (where the theme shines)
-					rosewater = palette.primary, -- Main highlights
-					flamingo = palette.accent, -- UI accents
-					pink = palette.primary, -- Alternative highlight
-					mauve = palette.keyword, -- Keywords
+			-- Telescope
+			vim.api.nvim_set_hl(0, "TelescopeSelection", { bg = colors.color12, fg = colors.color0, bold = true })
+			vim.api.nvim_set_hl(0, "TelescopeSelectionCaret", { bg = colors.color12, fg = colors.color1 })
 
-					-- Status colors
-					red = palette.error, -- Errors
-					maroon = palette.error, -- Alternative error
-					peach = palette.warning, -- Warnings
-					orange = palette.warning, -- Alternative warning
-					yellow = palette.info, -- Info
-					green = palette.git_add, -- Success
-					teal = palette.info, -- Alternative info
-					sky = palette.info, -- Alternative info
-					blue = palette.info, -- Alternative info
-					lavender = palette.accent, -- UI elements
+			-- CMP
+			vim.api.nvim_set_hl(0, "Pmenu", { bg = colors.color8, fg = colors.foreground })
+			vim.api.nvim_set_hl(0, "PmenuSel", { bg = colors.color12, fg = colors.color0, bold = true })
+			vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = colors.color4, bold = true })
+			vim.api.nvim_set_hl(0, "CmpItemMenu", { bg = colors.color8, fg = colors.color7 })
 
-					-- Syntax colors
-					sapphire = palette.type, -- Types
+			-- Notify.nvim
+			vim.api.nvim_set_hl(0, "NotifyINFOBorder", { fg = colors.color13 })
+			vim.api.nvim_set_hl(0, "NotifyINFOTitle", { fg = colors.color13, bold = true })
+			vim.api.nvim_set_hl(0, "NotifyINFOBody", { fg = colors.foreground })
+			vim.api.nvim_set_hl(0, "NotifyWARNBorder", { fg = colors.color3 })
+			vim.api.nvim_set_hl(0, "NotifyWARNTitle", { fg = colors.color3, bold = true })
+			vim.api.nvim_set_hl(0, "NotifyWARNBody", { fg = colors.foreground })
+			vim.api.nvim_set_hl(0, "NotifyERRORBorder", { fg = colors.color1 })
+			vim.api.nvim_set_hl(0, "NotifyERRORTitle", { fg = colors.color1, bold = true })
+			vim.api.nvim_set_hl(0, "NotifyERRORBody", { fg = colors.foreground })
+			vim.api.nvim_set_hl(0, "NotifyDEBUGBorder", { fg = colors.color5 })
+			vim.api.nvim_set_hl(0, "NotifyDEBUGTitle", { fg = colors.color5, bold = true })
+			vim.api.nvim_set_hl(0, "NotifyDEBUGBody", { fg = colors.foreground })
+			vim.api.nvim_set_hl(0, "NotifyTRACEBorder", { fg = colors.color6 })
+			vim.api.nvim_set_hl(0, "NotifyTRACETitle", { fg = colors.color6, bold = true })
+			vim.api.nvim_set_hl(0, "NotifyTRACEBody", { fg = colors.foreground })
 
-					-- Surface colors
-					surface0 = palette.cursorln,
-					surface1 = palette.comment,
-					surface2 = palette.comment,
-
-					-- Overlay colors
-					overlay0 = palette.visual, -- Visual selection
-					overlay1 = palette.visual, -- Secondary selection
-					overlay2 = palette.comment,
+			-- Lualine highlights using primary accent
+			local lualine_theme = {
+				normal = {
+					a = { bg = colors.color4, fg = colors.color0, gui = "bold" },
+					b = { bg = colors.color8, fg = colors.foreground },
+					c = { bg = colors.background, fg = colors.foreground },
 				},
-			},
-
-			integrations = {
-				cmp = true,
-				gitsigns = true,
-				nvimtree = true,
-				treesitter = true,
-				notify = false,
-				mini = { enabled = true },
-				bufferline = {
-					enabled = true,
-					transparent = true,
+				insert = {
+					a = { bg = colors.color2, fg = colors.color0, gui = "bold" },
+					b = { bg = colors.color8, fg = colors.foreground },
+					c = { bg = colors.background, fg = colors.foreground },
 				},
-			},
-		},
+				visual = {
+					a = { bg = colors.color12, fg = colors.color0, gui = "bold" },
+					b = { bg = colors.color8, fg = colors.foreground },
+					c = { bg = colors.background, fg = colors.foreground },
+				},
+				replace = {
+					a = { bg = colors.color1, fg = colors.color0, gui = "bold" },
+					b = { bg = colors.color8, fg = colors.foreground },
+					c = { bg = colors.background, fg = colors.foreground },
+				},
+				command = {
+					a = { bg = colors.color3, fg = colors.color0, gui = "bold" },
+					b = { bg = colors.color8, fg = colors.foreground },
+					c = { bg = colors.background, fg = colors.foreground },
+				},
+				inactive = {
+					a = { bg = colors.background, fg = colors.color8 },
+					b = { bg = colors.background, fg = colors.color8 },
+					c = { bg = colors.background, fg = colors.color8 },
+				},
+			}
 
-		config = function(_, opts)
-			-- setup plugin
-			require("catppuccin").setup(opts)
+			require("lualine").setup({
+				options = {
+					theme = lualine_theme,
+				},
+			})
 
-			-- alias for LazyVim compatibility with bufferline
-			local bufferline_int = require("catppuccin.groups.integrations.bufferline")
-			bufferline_int.get = bufferline_int.get_theme
+			-- Highlight (for search, diff, etc.)
+			vim.api.nvim_set_hl(0, "Search", { bg = colors.color12, fg = colors.color0, bold = true })
+			vim.api.nvim_set_hl(0, "IncSearch", { bg = colors.color12, fg = colors.color0, underline = true })
+			vim.api.nvim_set_hl(0, "VisualNOS", { bg = colors.color8, fg = colors.color0 })
+			vim.api.nvim_set_hl(0, "DiffAdd", { bg = colors.color10, fg = colors.color0 })
+			vim.api.nvim_set_hl(0, "DiffChange", { bg = colors.color11, fg = colors.color0 })
+			vim.api.nvim_set_hl(0, "DiffDelete", { bg = colors.color9, fg = colors.color0 })
+			vim.api.nvim_set_hl(0, "DiffText", { bg = colors.color12, fg = colors.color0 })
 
-			-- safely apply colorscheme
-			local ok, _ = pcall(vim.cmd, "colorscheme catppuccin")
-			if not ok then
-				vim.o.termguicolors = true
-				vim.notify("Failed to load colorscheme 'catppuccin'", vim.log.levels.WARN)
-			end
+			-- Remove unwanted underline in code
+			vim.api.nvim_set_hl(0, "Underlined", { underline = false })
+		end
 
-			-- === Custom Highlights ===
-			local cp = require("catppuccin.palettes").get_palette(opts.flavour)
-
-			-- Semantic Highlights
-			vim.api.nvim_set_hl(0, "Comment", { fg = palette.comment, italic = true })
-			vim.api.nvim_set_hl(0, "Keyword", { fg = palette.keyword, bold = true })
-			vim.api.nvim_set_hl(0, "Function", { fg = palette.func })
-			vim.api.nvim_set_hl(0, "Variable", { fg = palette.fg })
-			vim.api.nvim_set_hl(0, "String", { fg = palette.string })
-			vim.api.nvim_set_hl(0, "Constant", { fg = palette.constant })
-			vim.api.nvim_set_hl(0, "Number", { fg = palette.number })
-			vim.api.nvim_set_hl(0, "Type", { fg = palette.type })
-			vim.api.nvim_set_hl(0, "Operator", { fg = palette.operator })
-
-			-- LSP + CMP Popups
-			vim.api.nvim_set_hl(0, "Pmenu", { bg = palette.hint, fg = palette.fg })
-			vim.api.nvim_set_hl(0, "PmenuSel", { bg = palette.accent, fg = palette.fg, bold = true })
-			vim.api.nvim_set_hl(0, "NormalFloat", { bg = palette.bg })
-			vim.api.nvim_set_hl(0, "FloatBorder", { bg = palette.bg, fg = palette.accent })
-
-			-- Diagnostics
-			vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true, sp = palette.error })
-			vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = true, sp = palette.warning })
-			vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { undercurl = true, sp = palette.info })
-			vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = true, sp = palette.hint })
-
-			-- Visual / Cursor
-			vim.api.nvim_set_hl(0, "Visual", { bg = palette.visual })
-			vim.api.nvim_set_hl(0, "CursorLine", { bg = palette.cursorln })
-			vim.api.nvim_set_hl(0, "Cursor", { fg = palette.cursor })
-		end,
-	},
+		-- Apply colorscheme
+		vim.cmd.colorscheme("pywal16")
+		vim.defer_fn(setup_custom_highlights, 100)
+	end,
 }
