@@ -5,7 +5,7 @@
 /* Core colors from Matugen JSON */
 @define-color bg_main {{colors.surface.default.hex}};          /* Background */
 @define-color text_main {{colors.on_surface.default.hex}};    /* Main text */
-@define-color accent {{colors.primary.default.hex}};          /* Accent / highlight */
+@define-color accent {{colors.primary.dark.hex}};          /* Accent / highlight */
 
 @define-color battery_critical {{colors.red.default.hex}};
 @define-color battery_charging {{colors.green.default.hex}};

@@ -20,9 +20,10 @@ map("n", "<leader>r", "<CMD>Neotree reveal<CR>")
 -- Telescope
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
-map("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
+map("n", "<leader>fb", "<cmd>Telescope buffers initial_mode=normal<cr>")
 map("n", "<leader>fs", "<cmd>Telescope git_status<cr>")
 map("n", "<leader>fc", "<cmd>Telescope git commits<cr>")
+map("n", "<M-b>", "<cmd>Telescope buffers initial_mode=normal<CR>")
 
 -- Bufferline
 map("n", "<A-,>", "<cmd>BufferLineMovePrev<CR>")
@@ -38,9 +39,6 @@ map("n", "<leader>p", "<CMD>split<CR>")
 -- Buffer navigation with Caps H / L
 vim.keymap.set("n", "L", ":bnext<CR>", { desc = "Next Buffer" })
 vim.keymap.set("n", "H", ":bprevious<CR>", { desc = "Previous Buffer" })
-
--- Close buffer (optional)
--- vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "Close Buffer" })
 
 vim.keymap.set("n", "<leader>bd", function()
 	require("mini.bufremove").delete(0, false)

@@ -29,7 +29,7 @@ choice=$(echo -e "$menu" | rofi -dmenu -i -p "Select Bar Style")
 choice_file=$(echo "$choice" | sed "s/^$ICON//")
 
 # Copy chosen style to target
-cp "$BARS_DIR/$choice_file" "$TARGET"
+ln -sf "$BARS_DIR/$choice_file" "$TARGET"
 
 echo "Switched bar style to: $(basename "$choice_file" .css)"
 

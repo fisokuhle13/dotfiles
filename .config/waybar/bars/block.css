@@ -86,7 +86,6 @@ window#waybar.hidden {
 }
 
 #clock {
-  margin-right: 0;
   margin: 4px 4px 4px 16px;
   background-color: @bg_main;
   border: 2px solid @accent;

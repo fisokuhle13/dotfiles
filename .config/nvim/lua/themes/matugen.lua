@@ -21,6 +21,26 @@ return {
 			-- vim.api.nvim_set_hl(0, "String", { fg = colors.color2 })
 			-- vim.api.nvim_set_hl(0, "Constant", { fg = colors.color3 })
 
+			-- helper to safely extend highlights without overwriting colors
+			local function extend_hl(group, opts)
+				local current = vim.api.nvim_get_hl(0, { name = group })
+				if not current then
+					return
+				end
+				for k, v in pairs(opts) do
+					current[k] = v
+				end
+				vim.api.nvim_set_hl(0, group, current)
+			end
+
+			-- now apply style-only enhancements safely
+			extend_hl("Comment", { italic = true })
+			extend_hl("DiagnosticUnnecessary", { italic = true })
+			extend_hl("DiagnosticHint", { italic = true })
+			extend_hl("String", { italic = false })
+			extend_hl("Character", { italic = false })
+			extend_hl("Constant", { italic = false })
+
 			-- Telescope
 			vim.api.nvim_set_hl(0, "TelescopeSelection", { bg = colors.color12, fg = colors.color0, bold = true })
 			vim.api.nvim_set_hl(0, "TelescopeSelectionCaret", { bg = colors.color12, fg = colors.color1 })
@@ -48,10 +68,19 @@ return {
 			vim.api.nvim_set_hl(0, "NotifyTRACETitle", { fg = colors.color6, bold = true })
 			vim.api.nvim_set_hl(0, "NotifyTRACEBody", { fg = colors.foreground })
 
+			-- Dashboard.nvim (theme-local highlights)
+			vim.api.nvim_set_hl(0, "DashboardHeader", { fg = colors.color4, bold = true })
+			vim.api.nvim_set_hl(0, "DashboardCenter", { fg = colors.foreground })
+			vim.api.nvim_set_hl(0, "DashboardFooter", { fg = colors.color7 })
+			vim.api.nvim_set_hl(0, "DashboardKey", { fg = colors.color2, bold = true })
+			vim.api.nvim_set_hl(0, "DashboardDesc", { fg = colors.color6 })
+			vim.api.nvim_set_hl(0, "DashboardIcon", { fg = colors.color12 })
+			vim.api.nvim_set_hl(0, "DashboardShortcut", { fg = colors.color3 })
+
 			-- Lualine highlights using primary accent
 			local lualine_theme = {
 				normal = {
-					a = { bg = colors.color4, fg = colors.color0, gui = "bold" },
+					a = { bg = colors.color5, fg = colors.color0, gui = "bold" },
 					b = { bg = colors.color8, fg = colors.foreground },
 					c = { bg = colors.background, fg = colors.foreground },
 				},
