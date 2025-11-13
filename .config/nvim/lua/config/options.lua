@@ -35,9 +35,10 @@ vim.opt.mouse = ""
 vim.opt.formatoptions:append({ "r" })
 vim.opt.guicursor = ""
 vim.opt.clipboard = "unnamedplus"
-vim.opt.modifiable = true -- This is buffer-local; better in autocmd if needed
+vim.opt.modifiable = true
 
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"
 
 vim.opt.relativenumber = true
+vim.opt.termguicolors = true

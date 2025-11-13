@@ -17,36 +17,14 @@ configuration {
 
 /*****----- Color Palette (Gruvbox Dark) -----*****/
 * {
-    text-color:                  #ebdbb2; /* Gruvbox foreground */
-    background-color:            #282828; /* Gruvbox background */
-    lightbg:                     #282828; /* Gruvbox background */
-    red:                         #fb4934; /* Gruvbox color9 (red) */
-    orange:                      #fe8019; /* Gruvbox url_color (orange) */
-    blue:                        #83a598; /* Gruvbox color12 (blue) */
-    black-foreground:            #32302f; /* Gruvbox cursor_text_color */
-    gold:                        #fabd2f; /* Gruvbox color11 (yellow) */
+    text-color:                  #ebdbb2;
+    primary-color:               #fabd2f;
+    secondary-color:             #83a598;
+    background-color:            #282828; 
+    black-foreground:            #32302f; 
+    light-bg:                    #282828;
+    red:                         #fb4934;
 
-    selected-normal-foreground:  #32302f; /* Gruvbox cursor_text_color */
-    normal-foreground:           #ebdbb2; /* Gruvbox foreground */
-    alternate-normal-background: #282828; /* Gruvbox background */
-    selected-urgent-foreground:  #32302f; /* Gruvbox cursor_text_color */
-    urgent-foreground:           #32302f; /* Gruvbox cursor_text_color */
-    alternate-urgent-background: #282828; /* Gruvbox background */
-    active-foreground:           #ebdbb2; /* Gruvbox foreground */
-    selected-active-foreground:  #ebdbb2; /* Gruvbox foreground */
-    alternate-normal-foreground: #ebdbb2; /* Gruvbox foreground */
-    alternate-active-background: #83a598; /* Gruvbox color12 (blue) */
-    borderColor:                 #83a598; /* Gruvbox color12 (blue) */
-    normal-background:           #282828; /* Gruvbox background */
-    selected-normal-background:  #83a598; /* Gruvbox color12 (blue) */
-    separatorcolor:              #fabd2f; /* Gruvbox color11 (yellow) */
-    spacing:                     2;
-    urgent-background:           #fb4934; /* Gruvbox color9 (red) */
-    alternate-urgent-foreground: #ebdbb2; /* Gruvbox foreground */
-    selected-urgent-background:  #fb4934; /* Gruvbox color9 (red) */
-    alternate-active-foreground: #ebdbb2; /* Gruvbox foreground */
-    selected-active-background:  #83a598; /* Gruvbox color12 (blue) */
-    active-background:           #fabd2f; /* Gruvbox color11 (yellow) */
     font:                        "JetBrains Mono Nerd Font 14";
 }
 
@@ -91,7 +69,8 @@ inputbar {
     border:                      0px 0px 2px 0px;
 
     border-color:                @blue;
-    text-color:                  @normal-foreground;
+    text-color:                  @text-color;
+    background-color:            @black-foreground;
     border-radius:               10px;
     children:                    [ "entry" ];
 }
@@ -100,9 +79,8 @@ prompt {
     enabled:                     true;
     padding:                     15px;
     border:                      0px 1px 0px 0px;
-    border-color:                @normal-foreground;
-    background-color:            @normal-foreground;
-    text-color:                  @black-foreground;
+    background-color:            @black-foreground;
+    text-color:                  @text-color;
     border-radius:               5px;
 }
 textbox-prompt-colon {
@@ -155,24 +133,14 @@ element {
     padding:                     3px 5px;
     border-radius:               10px;
     background-color:            transparent;
-    text-color:                  @normal-foreground;
+    text-color:                  @text-color;
     cursor:                      pointer;
 }
 element selected.normal {
-    text-color:                  @orange;
-}
-element selected.urgent {
-    text-color:                  @selected-urgent-foreground;
-}
-element selected.active {
-    text-color:                  @selected-active-foreground;
-}
-element alternate.active {
-    background-color:            @alternate-active-background;
-    text-color:                  @alternate-active-foreground;
+    text-color:                 @primary-color;
 }
 element-icon {
-    size:                        38px;
+    size:                        24px;
     text-color:                  inherit;
 }
 element-text {
@@ -190,7 +158,7 @@ mode-switcher {
 button {
     padding:                     10px;
     background-color:            @background-color;
-    text-color:                  @orange;
+    text-color:                  @primary-color;
     cursor:                      pointer;
 }
 

@@ -1,1 +1,1 @@
-/home/projectblack/.config/nvim/lua/themes/solarized-osaka.lua
+/home/projectblack/.config/nvim/lua/themes/gray.lua

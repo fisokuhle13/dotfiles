@@ -1,5 +1,5 @@
 /**
- * Rofi Theme File with Solarized Osaka Palette
+ * Rofi Theme File with zenbones (stark) Palette
  **/
 
 /*****----- Configuration -----*****/
@@ -14,14 +14,12 @@ configuration {
     window-format:              "{w} · {c} · {t}";
 }
 
-/*****----- Color Palette (Solarized Osaka) -----*****/
 * {
-    primary-color:               #b58900;
-    secondary-color:             #2176c7;
-    background-color:            #0a1a1f;   /* Base */
-    text-color:                  #d0d7df;   /* Text */
-    light-bg:                    #132b32;    /* Surface0 */
-
+    primary-color:               #aaaaaa;   /* Highlight gray */
+    secondary-color:             #666666;   /* Accent / active element gray */
+    background-color:            #0a0a0a;   /* Deep black base */
+    text-color:                  #e0e0e0;   /* Primary text (foreground) */
+    light-bg:                    #1a1a1a;   /* Surface background / cards */
     font: "JetBrains Mono Nerd Font 14";
 }
 

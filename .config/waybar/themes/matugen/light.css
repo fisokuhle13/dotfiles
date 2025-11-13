@@ -3,9 +3,9 @@
 /* ------------------------*/
 
 /* Core colors from Matugen JSON */
-@define-color bg_main #faf9ff;            /* Background */
-@define-color text_main #1a1b20;       /* Main text */
-@define-color accent #465d91;             /* Accent / highlight */
+@define-color bg_main #f8f9ff;            /* Background */
+@define-color text_main #191c20;       /* Main text */
+@define-color accent #38608f;             /* Accent / highlight */
 
 /* Functional colors */
 @define-color battery_critical #8f4952;

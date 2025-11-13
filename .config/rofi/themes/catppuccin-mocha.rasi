@@ -16,15 +16,11 @@ configuration {
 
 /*****----- Color Palette (Catppuccin Mocha) -----*****/
 * {
+    primary-color:               #cba6f7;
+    secondary-color:             #89b4fa;
     text-color:                  #cdd6f4;   /* Text */
     background-color:            #1e1e2e;   /* Base */
-    lightbg:                     #313244;   /* Surface0 */
-    red:                         #f38ba8;
-    orange:                      #fab387;
-    blue:                        #89b4fa;
-    black-foreground:            #1e1e2e;
-    gold:                        #f9e2af;
-    base:                        #cba6f7;
+    light-bg:                    #313244;   /* Surface0 */
 
     normal-background:           #1e1e2e;   /* Base */
     normal-foreground:           #cdd6f4;   /* Text */
@@ -52,7 +48,8 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       600px;
-    opacity:                     0.9; /* darker, less see-through */
+
+    opacity:                     0.5;
     background-color:            @background-color;
 
     enabled:                     true;
@@ -82,7 +79,7 @@ inputbar {
 
     border:                      0px 0px 2px 0px;
     border-color:                @blue;
-    background-color:            @selected-normal-foreground;
+    background-color:            @light-bg;
     text-color:                  @normal-foreground;
     border-radius:               8px;
     children:                    [ "entry" ];
@@ -133,17 +130,11 @@ element {
     cursor:                      pointer;
 }
 element selected.normal {
-    text-color:       @base;
-}
-element normal.active {
-    text-color:       @orange;
-}
-element normal.urgent {
-    text-color:       @urgent-foreground;
+    text-color:       @primary-color;
 }
 
 element-icon {
-    size:                        28px;
+    size:                        24px;
     text-color:                  inherit;
 }
 element-text {

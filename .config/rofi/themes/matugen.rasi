@@ -16,39 +16,11 @@ configuration {
 
 /*****----- Color Palette -----*****/
 * {
-    text-color:                  #e2e2e9;
-    background-color:            #121318;
-    lightbg:                     #1a1b21;
-
-    red:                         #ffb2b9;
-    green:                       #95d5a7;
-    blue:                        #b8c4ff;
-    orange:                      #ffb780;
-    gold:                        #cbcb77;
-
-    black-foreground:            #0c0e13;
-
-    selected-normal-foreground:  #121318;
-    normal-foreground:           #e2e2e9;
-    alternate-normal-background: #121318;
-    selected-urgent-foreground:  #121318;
-    urgent-foreground:           #690005;
-    alternate-urgent-background: #38393f;
-    active-foreground:           #162e60;
-    selected-active-foreground:  #2a3042;
-    alternate-normal-foreground: #c5c6d0;
-    alternate-active-background: #404659;
-    borderColor:                 #cbcb77;
-    normal-background:           #121318;
-    selected-normal-background:  #b1c5ff;
-    separatorcolor:              #ffb780;
-    spacing:                     2;
-    urgent-background:           #ffb2b9;
-    alternate-urgent-foreground: #ffdad6;
-    selected-urgent-background:  #93000a;
-    alternate-active-foreground: #dce2f9;
-    selected-active-background:  #c0c6dc;
-    active-background:           #ffb780;
+    text-color:                  #e1e2e8;
+    primary-color:               #a2c9fe;
+    secondary-color:               #bbc7db;
+    background-color:            #111418;
+    light-bg:                    #191c20;
     font: "JetBrains Mono Nerd Font 14";
 }
 
@@ -68,7 +40,6 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
-    border-color:                @blue;
     border-radius:               10px;
     cursor:                      "default";
 }
@@ -93,7 +64,8 @@ inputbar {
     border:                      0px 0px 2px 0px;
 
     border-color:                @blue;
-    text-color:                  @normal-foreground;
+    text-color:                  @text-color;
+    background-color:            @light-bg;
     border-radius:               10px;
     children:                    [ "entry" ];
 }
@@ -103,8 +75,7 @@ prompt {
     padding:                     15px;
     border:                      0px 1px 0px 0px;
     border-color:                @normal-foreground;
-    background-color:            @normal-foreground;
-    text-color:                  @black-foreground;
+    text-color:                  @text-color;
     border-radius:               5px;
 }
 textbox-prompt-colon {
@@ -112,7 +83,7 @@ textbox-prompt-colon {
     expand:                      false;
     str:                         "::";
     background-color:            inherit;
-    text-color:                  @normal-foreground;
+    text-color:                  @text-color;
 }
 entry {
     enabled:                     true;
@@ -161,20 +132,7 @@ element {
     cursor:                      pointer;
 }
 element selected.normal {
-  background-color: @selected-normal-bakground;
-  text-color: @orange;
-}
-element selected.urgent {
-  background-color: @urgent-background;
-  text-color: @selected-urgent-foreground;
-}
-element selected.active {
-  background-color: @active-background;
-  text-color: @selected-active-foreground;
-}
-element alternate.active {
-  background-color: @alternate-active-background;
-  text-color: @alternate-active-foreground;
+  text-color: @primary-color;
 }
 element-icon {
     size:                        38px;
