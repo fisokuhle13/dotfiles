@@ -16,6 +16,7 @@ return {
 					"ruff",
 					"cssls",
 					"pyright",
+          "pylsp",
 					"cssmodules_ls",
 					"html",
 					"ts_ls",
@@ -23,6 +24,7 @@ return {
 					"gopls",
 					"clangd",
 					"rust_analyzer",
+					"svelte",
 				},
 			})
 		end,

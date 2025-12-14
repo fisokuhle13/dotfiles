@@ -16,11 +16,11 @@ configuration {
 
 /*****----- Color Palette -----*****/
 * {
-    text-color:                  #e1e2e8;
-    primary-color:               #a2c9fe;
-    secondary-color:               #bbc7db;
-    background-color:            #111418;
-    light-bg:                    #191c20;
+    text-color:                  #dde4e3;
+    primary-color:               #80d4d5;
+    secondary-color:               #b0cccc;
+    background-color:            #0e1415;
+    light-bg:                    #161d1d;
     font: "JetBrains Mono Nerd Font 14";
 }
 
@@ -40,6 +40,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
+    border-color:                @blue;
     border-radius:               10px;
     cursor:                      "default";
 }

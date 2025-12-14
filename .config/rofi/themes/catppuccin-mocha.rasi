@@ -104,18 +104,19 @@ entry {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       8;
+    lines:                       6;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
     layout:                      vertical;
     fixed-height:                true;
     fixed-columns:               true;
-
-    spacing:                     6px;
+    
+    spacing:                     10px;
     margin:                      0px;
-    padding:                     12px;
+    padding:                     20px;
     border:                      0px;
+    border-radius:               0px;
     background-color:            @background-color;
     text-color:                  @normal-foreground;
 }

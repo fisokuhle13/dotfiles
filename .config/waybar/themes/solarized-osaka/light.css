@@ -2,7 +2,7 @@
 /* light Solirized Osaka */
 /* ------------------------*/
 
-@define-color bg_main #ffffff; /* light background */
+@define-color bg_main rgba(255, 255, 255, 0.6);
 @define-color text_main #063642; /* dark/blue text */
 @define-color accent #b58900; /* accent stays same */
 @define-color battery_critical rgba(238,46,36,1); /* red stays red */

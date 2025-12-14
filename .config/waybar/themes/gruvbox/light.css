@@ -2,7 +2,8 @@
 /* Gruvbox Light           */
 /* ------------------------*/
 
-@define-color bg_main #fbf1c7;
+/* @define-color bg_main #fbf1c7; */
+@define-color bg_main rgba(251, 241, 199, 0.6);
 @define-color text_main #3c3836;
 @define-color accent #b57614; /* yellow-brown accent */
 @define-color battery_critical #9d0006; /* dark red */

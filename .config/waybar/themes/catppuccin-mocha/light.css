@@ -2,7 +2,8 @@
 /* Catppuccin Mocha - Soft Light */
 /* ------------------------*/
 
-@define-color bg_main   #f2f2f6; /* off-white with lavender tint */
+/* @define-color bg_main   #f2f2f6; */
+@define-color bg_main rgba(242, 242, 246, 0.8);
 @define-color text_main #4c4f69; /* Catppuccin Latte text, dark gray with lavender softness */
 @define-color accent    #b99de9; /* softened mauve */
 

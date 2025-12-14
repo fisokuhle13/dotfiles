@@ -16,7 +16,6 @@
       "*": 5
     }
   },
-
   // Taskbar
   "wlr/taskbar": {
     "format": "{icon}",
@@ -24,7 +23,10 @@
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
-    "ignore-list": ["Alacritty", "kitty"],
+    "ignore-list": [
+      "Alacritty",
+      "kitty"
+    ],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition"
     },
@@ -33,7 +35,6 @@
       "Foot Server": "Terminal"
     }
   },
-
   // Clock
   "clock": {
     "format": "{:%H:%M %a}",
@@ -41,40 +42,40 @@
     "timezone": "",
     "tooltip": false
   },
-
   "memory": {
     "interval": 1,
     "format": "{icon} {percentage}%",
     "format-icons": {
-      "default": "\uf538"
+      "default": " "
     },
     "on-click": "gnome-system-monitor"
   },
-
   "cpu": {
     "interval": 1,
     "format": "{icon} {usage}%",
     "format-icons": {
-      "default": "\uf2db"
+      "default": " "
     },
     "tooltip": false,
     "on-click": "gnome-system-monitor"
   },
-
   "network": {
     "interval": 1,
-    "format-wifi": "\uf1eb  \uf019 {bandwidthDownBytes}  \uf093 {bandwidthUpBytes}",
-    "format-ethernet": "\uf6ff  \uf019 {bandwidthDownBytes}  \uf093 {bandwidthUpBytes}",
-    "format-disconnected": "\uf00d Disconnected",
+    "format-wifi": "   {bandwidthDownBytes}   {bandwidthUpBytes}",
+    "format-ethernet": "󰈀   {bandwidthDownBytes}   {bandwidthUpBytes}",
+    "format-disconnected": "󰖪 Disconnected",
     "tooltip-format": "{ifname}: {ipaddr}/{cidr} {bandwidthDownBits}bps\uf019/{bandwidthUpBits}bps\uf093",
     "on-click": "~/dotfiles/global/scripts/network.sh",
     "on-click-right": "~/dotfiles/global/scripts/nm-applet.sh",
     "format-icons": {
-      "default": ["\uf0c1", "\uf0c2", "\uf0c3"]
+      "default": [
+        "\uf0c1",
+        "\uf0c2",
+        "\uf0c3"
+      ]
     },
     "fixed-size": 150
   },
-
   // Battery
   "battery": {
     "interval": 1,
@@ -84,48 +85,61 @@
       "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{icon} {time}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": [" ", " ", " ", " ", " "]
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁾",
+      "󰂁",
+      "󰁹"
+    ]
   },
-
   // Power Profiles Daemon
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
     "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
+      "default": " ",
+      "performance": " ",
+      "balanced": "  ",
+      "power-saver": " "
     }
   },
-
+  "tray": {
+    "spacing": 10,
+    "ignore-list": [
+      "nm-applet"
+    ]
+  },
   // Pulseaudio
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
     "format": "{icon} {volume}%",
     "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
+    "format-bluetooth-muted": "  {icon} {format_source}",
+    "format-muted": "  {format_source}",
     "format-source": "{volume}% ",
-    "format-source-muted": "  ",
+    "format-source-muted": " ",
     "format-icons": {
+      "muted": " ",
       "headphone": " ",
       "hands-free": " ",
       "headset": " ",
       "phone": " ",
       "portable": " ",
-      "car": "  ",
-      "default": ["", " ", " "]
+      "car": " ",
+      "default": [
+        " ",
+        " ",
+        " "
+      ]
     },
     "on-click": "pavucontrol"
   },
-
   // Bluetooth
   "bluetooth": {
     "format": " {status}",
@@ -135,14 +149,12 @@
     "on-click": "blueman-manager",
     "format-no-controller": ""
   },
-
   // Other
   "user": {
     "format": "{user}",
     "interval": 60,
     "icon": false
   },
-
   // backlight:
   "backlight": {
     "format": "{icon} {percent}%",

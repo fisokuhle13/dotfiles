@@ -13,7 +13,7 @@ export PATH="/usr/lib/ccache/bin/:$PATH"
 # -----------------------------------------------------
 
 # Initialize Rust
-source $HOME/.cargo/env
+#source $HOME/.cargo/env
 
 # Initialize Starship
 eval "$(starship init bash)"

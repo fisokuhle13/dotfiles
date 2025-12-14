@@ -1,0 +1,19 @@
+/* ------------------------*/
+/* Tokyo Night (Light) */
+/* ------------------------*/
+
+@define-color bg_main rgba(233, 235, 255, 0.75);
+/* #e9ebff */
+@define-color text_main #3760bf;
+/* fg */
+
+/* PRIMARY UI ACCENT */
+@define-color accent #2e7de9;
+/* blue */
+
+/* SEMANTIC COLORS */
+@define-color battery_critical rgba(238, 46, 36, 1);
+@define-color battery_charging #2ad55c;
+
+/* OVERLAY */
+@define-color overlay rgba(0, 0, 0, 0.08);

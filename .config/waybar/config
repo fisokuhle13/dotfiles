@@ -26,8 +26,8 @@
 "memory",
 "pulseaudio",
 "battery",
-"tray",
 "power-profiles-daemon",
+"tray",
 "clock",
 ],
 }
