@@ -12,7 +12,7 @@ echo ">> Switching to theme: $THEME"
 # Confirm current theme
 if [ "$THEME" == "matugen" ]; then
   echo ":: Execute matugen with $HOME/dotfiles/global/current_wallpaper.png"
-  "$HOME/.cargo/bin/matugen" image "$HOME/dotfiles/global/current_wallpaper.png"
+  matugen image "$HOME/dotfiles/global/current_wallpaper.png"
 fi
 
 link_theme() {

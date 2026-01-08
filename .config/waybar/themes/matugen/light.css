@@ -3,12 +3,12 @@
 /* ------------------------*/
 
 /* Core colors from Matugen JSON */
-@define-color bg_main #f4fbfa;            /* Background */
-@define-color text_main #161d1d;       /* Main text */
-@define-color accent #00696b;             /* Accent / highlight */
+@define-color bg_main #f5fafc;            /* Background */
+@define-color text_main #171d1e;       /* Main text */
+@define-color accent #006877;             /* Accent / highlight */
 
 /* Functional colors */
-@define-color battery_critical #8e4d2e;
+@define-color battery_critical #8f4952;
 @define-color battery_charging #2d6a45;
 
 /* Overlay / translucent effects */

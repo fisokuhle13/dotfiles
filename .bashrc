@@ -6,7 +6,12 @@
 # Exports
 # -----------------------------------------------------
 export EDITOR=nvim
+set -o vi
+
 export PATH="/usr/lib/ccache/bin/:$PATH"
+
+# Custom binaries
+export PATH="$HOME/.bin:$PATH"
 
 # -----------------------------------------------------
 # AUTOSTART
@@ -14,6 +19,7 @@ export PATH="/usr/lib/ccache/bin/:$PATH"
 
 # Initialize Rust
 #source $HOME/.cargo/env
+
 
 # Initialize Starship
 eval "$(starship init bash)"
@@ -63,3 +69,4 @@ alias ls='ls $LS_OPTIONS'
 
 # SSH Agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+

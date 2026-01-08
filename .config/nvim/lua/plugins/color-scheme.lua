@@ -1,1 +1,1 @@
-/home/projectblack/.config/nvim/lua/themes/tokyo-night.lua
+/home/projectblack/.config/nvim/lua/themes/monochrome.lua

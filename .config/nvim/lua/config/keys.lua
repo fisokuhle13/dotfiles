@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 local function map(mode, lhs, rhs)
-	vim.keymap.set(mode, lhs, rhs, { silent = true })
+  vim.keymap.set(mode, lhs, rhs, { silent = true })
 end
 
 -- Save
@@ -24,6 +24,10 @@ map("n", "<leader>fb", "<cmd>Telescope buffers initial_mode=normal<cr>")
 map("n", "<leader>fs", "<cmd>Telescope git_status<cr>")
 map("n", "<leader>fc", "<cmd>Telescope git commits<cr>")
 map("n", "<M-b>", "<cmd>Telescope buffers initial_mode=normal<CR>")
+map("n", "<leader>bf", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
+
+-- Flash
+map("n", "<leader>j", "<cmd>lua require('flash').jump()<cr>")
 
 -- Bufferline
 map("n", "<A-,>", "<cmd>BufferLineMovePrev<CR>")
@@ -41,7 +45,7 @@ vim.keymap.set("n", "L", ":bnext<CR>", { desc = "Next Buffer" })
 vim.keymap.set("n", "H", ":bprevious<CR>", { desc = "Previous Buffer" })
 
 vim.keymap.set("n", "<leader>bd", function()
-	require("mini.bufremove").delete(0, false)
+  require("mini.bufremove").delete(0, false)
 end, { desc = "Close Buffer (Keep Split)" })
 
 -- Resize Windows
@@ -49,11 +53,6 @@ map("n", "<C-Left>", "<C-w><")
 map("n", "<C-Right>", "<C-w>>")
 map("n", "<C-Up>", "<C-w>+")
 map("n", "<C-Down>", "<C-w>-")
-
--- Show only current buffer diagnostics
-vim.keymap.set("n", "<leader>de", function()
-	vim.diagnostic.setloclist({ open = true, scope = "buffer" }) -- only current buffer
-end, { desc = "Diagnostics (Current Buffer)" })
 
 -- clear search
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { silent = true })

@@ -1,0 +1,10 @@
+/* ------------------------*/
+/* Dark zenbones (stark) Gray */
+/* ------------------------*/
+
+@define-color bg_main rgba(0, 0, 0, 0.7); /* Deep black base */
+@define-color text_main #e0e0e0; /* Light gray text */
+@define-color accent #aaaaaa; /* Neutral gray accent (focus, borders) */
+@define-color battery_critical rgba(238,46,36,1); /* Keep semantic red */
+@define-color battery_charging #2ad55c; /* Keep semantic green */
+@define-color overlay rgba(255,255,255,0.05); /* Subtle white overlay for depth */

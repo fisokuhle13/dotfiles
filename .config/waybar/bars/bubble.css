@@ -32,7 +32,7 @@ window#waybar.hidden {
   all: initial;
   min-width: 0;
   box-shadow: inset 0 -3px transparent;
-  padding: 2px 14px;
+  padding: 0px 12px;
   margin: 4px 2px;
   border-radius: 24px;
   background-color: @accent;
@@ -43,7 +43,7 @@ window#waybar.hidden {
 #workspaces button.active {
   color: @text_main;
   background: @accent;
-  opacity: 1;
+  opacity: 0.9;
 }
 
 #workspaces button:hover {
@@ -97,13 +97,12 @@ window#waybar.hidden {
 
 #clock {
   margin: 4px 4px 4px 16px;
-  padding: 0 6px;
+  padding: 0 12px;
   border: 2px solid @accent;
   color: @accent;
 }
 
 #power-profiles-daemon {
-  font-size: 14px;
   min-width: 32px;
   color: @text_main;
 }
