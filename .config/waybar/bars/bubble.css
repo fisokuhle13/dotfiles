@@ -43,7 +43,7 @@ window#waybar.hidden {
 #workspaces button.active {
   color: @text_main;
   background: @accent;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 #workspaces button:hover {

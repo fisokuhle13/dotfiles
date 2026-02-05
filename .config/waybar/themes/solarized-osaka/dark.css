@@ -4,9 +4,9 @@
 
 /* @define-color bg_main #063642; */
 
-@define-color bg_main rgba(6, 54, 66, 0.8);
+@define-color bg_main rgba(6, 54, 66, 0.9);
 @define-color text_main #ffffff;
 @define-color accent #b58900;
-@define-color battery_critical rgba(238,46,36,1);
+@define-color battery_critical rgba(238, 46, 36, 1);
 @define-color battery_charging #2ad55c;
-@define-color overlay rgba(255,255,255,0.1);
+@define-color overlay rgba(255, 255, 255, 0.1);

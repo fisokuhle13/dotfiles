@@ -49,7 +49,7 @@ return {
       -- tweak diagnostic display behavior
       vim.diagnostic.config({
         virtual_text = false, -- disable inline messages (keep gutter clean)
-        signs = true,     -- ensure signs are shown
+        signs = true,         -- ensure signs are shown
         underline = true,
         update_in_insert = false,
         severity_sort = true,
@@ -69,9 +69,9 @@ return {
         settings = {
           python = {
             analysis = {
-              diagnosticMode = "off", -- disables all diagnostics
+              diagnosticMode = "off",       -- disables all diagnostics
               autoImportCompletions = true, -- get those import suggestions
-              typeCheckingMode = "off", -- completely disable type checking
+              typeCheckingMode = "off",     -- completely disable type checking
               autoSearchPaths = true,
               useLibraryCodeForTypes = true,
             },
@@ -130,8 +130,8 @@ return {
       vim.lsp.config("clangd", {
         cmd = {
           "clangd",
-          "--completion-style=detailed",  -- completions without auto-inserted snippets
-          "--header-insertion=never",     -- don't auto add includes
+          "--completion-style=detailed",       -- completions without auto-inserted snippets
+          "--header-insertion=never",          -- don't auto add includes
           "--function-arg-placeholders=false", -- disables auto placeholders in functions
         },
         capabilities = vim.lsp.protocol.make_client_capabilities({

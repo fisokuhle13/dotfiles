@@ -1,1 +1,1 @@
-/home/projectblack/.config/nvim/lua/themes/monochrome.lua
+/home/projectblack/.config/nvim/lua/themes/gruvbox.lua

@@ -5,22 +5,15 @@ return {
       "rafamadriz/friendly-snippets", -- optional but recommended for snippets
       "L3MON4D3/LuaSnip",
     },
+
+    version = "*", -- or "*" for latest
     opts = {
-      keymap = { preset = 'default' },
+      keymap = { preset = 'enter' },
+
+
+
       appearance = {
         nerd_font_variant = "mono",
-      },
-
-      windows = {
-        autocomplete = {
-          border = "single", -- or "rounded", "double", "shadow"
-        },
-        documentation = {
-          border = "single",
-        },
-        signature = {
-          border = "single",
-        },
       },
 
       snippets = {

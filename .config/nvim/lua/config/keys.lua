@@ -29,6 +29,9 @@ map("n", "<leader>bf", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
 -- Flash
 map("n", "<leader>j", "<cmd>lua require('flash').jump()<cr>")
 
+-- TODO Comments
+map("n", "<leader>td", "<cmd>TodoQuickFix<cr>")
+
 -- Bufferline
 map("n", "<A-,>", "<cmd>BufferLineMovePrev<CR>")
 map("n", "<A-.>", "<cmd>BufferLineMoveNext<CR>")

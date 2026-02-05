@@ -1,5 +1,4 @@
 -- Solarized Osaka
---
 
 return {
   {
