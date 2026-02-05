@@ -13,7 +13,7 @@ for t in "${themes[@]}"; do
 done
 
 # Rofi menu
-choice=$(printf "%s\n" "${themes_with_icons[@]}" | rofi -dmenu -i -p "Select Theme")
+choice=$(printf "%s\n" "${themes_with_icons[@]}" | rofi -dmenu -i -p "Theme:")
 [ -z "$choice" ] && exit 0
 
 # Strip icon to get the actual theme name

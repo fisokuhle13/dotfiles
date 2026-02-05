@@ -40,7 +40,7 @@ link_theme "$HOME/.config/kitty/themes/${THEME}.conf" \
 
 ### Rofi
 link_theme "$HOME/.config/rofi/themes/${THEME}.rasi" \
-            "$HOME/.config/rofi/theme.rasi" \
+            "$HOME/.config/rofi/colors.rasi" \
             "Rofi"
 
 ### NVIM

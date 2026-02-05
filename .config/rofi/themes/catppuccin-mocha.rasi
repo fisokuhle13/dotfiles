@@ -1,26 +1,10 @@
-/**
- * Rofi Theme File - Catppuccin Mocha Inspired
- **/
-
-/*****----- Configuration -----*****/
-configuration {
-    modi:                       "drun,run,window";
-    show-icons:                 true;
-    icon-theme:                 "Papirus";
-    display-drun:               "drun";
-    display-run:                "run";
-    display-window:             "window";
-    drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-    window-format:              "{w} · {c} · {t}";
-}
-
 /*****----- Color Palette (Catppuccin Mocha) -----*****/
 * {
     primary-color:               #cba6f7;
     secondary-color:             #89b4fa;
     text-color:                  #cdd6f4;   /* Text */
     background-color:            #1e1e2e;   /* Base */
-    light-bg:                    #313244;   /* Surface0 */
+    foreground-color:                    #313244;   /* Surface0 */
 
     normal-background:           #1e1e2e;   /* Base */
     normal-foreground:           #cdd6f4;   /* Text */
@@ -33,124 +17,5 @@ configuration {
 
     urgent-background:           #f38ba8;
     urgent-foreground:           #1e1e2e;
-
-    borderColor:                 #585b70;   /* Surface2 */
-    separatorcolor:              #585b70;
-
-    spacing:                     2;
-    font: "JetBrains Mono Nerd Font 14";
 }
 
-/*****----- Main Window -----*****/
-window {
-    transparency:                "real";
-    location:                    center;
-    anchor:                      center;
-    fullscreen:                  false;
-    width:                       600px;
-
-    opacity:                     0.5;
-    background-color:            @background-color;
-
-    enabled:                     true;
-    margin:                      0px;
-    padding:                     0px;
-    border:                      2px solid;
-    border-color:                @blue;
-    border-radius:               10px;
-    cursor:                      "default";
-}
-
-/*****----- Main Box -----*****/
-mainbox {
-    enabled:                     true;
-    spacing:                     0px;
-    margin:                      0px;
-    padding:                     0px;
-    border:                      0px solid;
-    children:                    [ "inputbar", "listview" ];
-}
-
-/*****----- Inputbar -----*****/
-inputbar {
-    enabled:                     true;
-    margin:                      8px 12px;
-    padding:                     6px;
-
-    border:                      0px 0px 2px 0px;
-    border-color:                @blue;
-    background-color:            @light-bg;
-    text-color:                  @normal-foreground;
-    border-radius:               8px;
-    children:                    [ "entry" ];
-}
-
-prompt {
-    enabled:                     true;
-    padding:                     8px;
-    background-color:            @blue;
-    text-color:                  @black-foreground;
-    border-radius:               6px;
-}
-entry {
-    enabled:                     true;
-    padding:                     8px;
-    background-color:            inherit;
-    text-color:                  inherit;
-    cursor:                      text;
-}
-
-/*****----- Listview -----*****/
-listview {
-    enabled:                     true;
-    columns:                     1;
-    lines:                       6;
-    cycle:                       true;
-    dynamic:                     true;
-    scrollbar:                   false;
-    layout:                      vertical;
-    fixed-height:                true;
-    fixed-columns:               true;
-    
-    spacing:                     10px;
-    margin:                      0px;
-    padding:                     20px;
-    border:                      0px;
-    border-radius:               0px;
-    background-color:            @background-color;
-    text-color:                  @normal-foreground;
-}
-
-/*****----- Elements -----*****/
-element {
-    spacing:                     6px;
-    padding:                     6px 10px;
-    border-radius:               6px;
-    background-color:            transparent;
-    text-color:                  @normal-foreground;
-    cursor:                      pointer;
-}
-element selected.normal {
-    text-color:       @primary-color;
-}
-
-element-icon {
-    size:                        24px;
-    text-color:                  inherit;
-}
-element-text {
-    text-color:                  inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0.0;
-}
-
-/*****----- Message -----*****/
-message {
-    enabled:                     true;
-    background-color:            transparent;
-    text-color:                  @orange;
-}
-error-message {
-    background-color:            @background-color;
-    text-color:                  @red;
-}

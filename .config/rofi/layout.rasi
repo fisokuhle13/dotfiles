@@ -1,26 +1,23 @@
-/**
- * Rofi Theme File with zenbones (stark) Palette
- **/
+/*****----- Color Palette -----*****/
+@import                          "./colors.rasi"
+
+
 
 /*****----- Configuration -----*****/
 configuration {
     modi:                       "drun,run,window";
     show-icons:                 true;
     icon-theme:                 "Papirus";
-    display-drun:               "drun";
+    display-drun:               " ";
     display-run:                "run";
     display-window:             "window";
     drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
     window-format:              "{w} · {c} · {t}";
-}
+    font: "JetBrains Mono Nerd Font 12";
 
-* {
-    primary-color:               #aaaaaa;   /* Highlight gray */
-    secondary-color:             #666666;   /* Accent / active element gray */
-    background-color:            #0a0a0a;   /* Deep black base */
-    text-color:                  #e0e0e0;   /* Primary text (foreground) */
-    light-bg:                    #1a1a1a;   /* Surface background / cards */
-    font: "JetBrains Mono Nerd Font 14";
+    filebrowser { directories-first: true;
+        sorting-method:    "name";
+    }
 }
 
 /*****----- Main Window -----*****/
@@ -58,35 +55,36 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     0px;
-    margin:                      8px 8px 0px 8px;
+    margin:                      8px 8px 8px 8px;
     padding:                     0px;
-    border:                      0px 0px 1px 0px;
+    border:                      0px 0px 2px 0px;
 
-    border:                      2px solid;
     text-color:                  @text-color;
-    background-color:            @light-bg;
+    background-color:            @foreground-color;
     border-radius:               10px;
-    children:                    [ "entry" ];
+    children:                    [ "prompt", "entry" ];
 }
 
 prompt {
     enabled:                     true;
-    padding:                     0px;
+    padding:                     16px  8px 16px 16px;
     border:                      0px 1px 0px 0px;
-    background-color:            @light-bg;
+    background-color:            transparent;
     text-color:                  @text-color;
     border-radius:               5px;
+
 }
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
     str:                         "::";
     background-color:            inherit;
-    text-color:                  @text-color;
+    text-color:                  @normal-foreground;
+
 }
 entry {
     enabled:                     true;
-    padding:                     15px;
+    padding:                     16px 16px 16px 0px;
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
@@ -108,47 +106,49 @@ listview {
     
     spacing:                     10px;
     margin:                      0px;
-    padding:                     20px;
+    padding:                     8px;
     border:                      0px;
     border-radius:               0px;
     background-color:            @background-color;
-    text-color:                  @text-color;
+    text-color:                  @normal-foreground;
 }
 scrollbar {
-    handle-width:                5px ;
+    handle-width:                5px;
     handle-color:                @blue;
     border-radius:               0px;
-    background-color:            @text-color;
+    background-color:            @normal-foreground;
 }
 
 /*****----- Elements -----*****/
 element {
-    spacing:                     10px;
-    padding:                     3px 5px;
+    padding:                     12px 6px;
     border-radius:               10px;
     background-color:            transparent;
     text-color:                  @text-color;
     cursor:                      pointer;
 }
-
 element selected.normal {
-  text-color: @primary-color;
-  background: @light-bg;
+    text-color:                 @text-color;
+    background-color:           @secondary-color;
 }
 
 element-icon {
     size:                        24px;
     text-color:                  inherit;
-}
 
+    background-color:            transparent;
+    text-color:                  inherit;
+    padding: 0px 12px 0px 0px;
+}
 element-text {
+    background-color:            transparent;
     text-color:                  inherit;
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }
 
 /*****----- Mode Switcher -----*****/
-mode-switcher{
+mode-switcher {
     enabled:                     false;
     spacing:                     10px;
     text-color:                  @normal-foreground;
@@ -156,7 +156,7 @@ mode-switcher{
 button {
     padding:                     10px;
     background-color:            @background-color;
-    text-color:                  @orange;
+    text-color:                  @primary-color;
     cursor:                      pointer;
 }
 
