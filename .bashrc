@@ -73,7 +73,7 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# HSTR configuration - add this to ~/.bashrc
+# HSTR configuration
 alias hh=hstr                    # hh to be alias for hstr
 export HSTR_CONFIG=hicolor       # get more colors
 shopt -s histappend              # append new history items to .bash_history

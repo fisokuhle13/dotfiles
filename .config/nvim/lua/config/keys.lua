@@ -19,6 +19,7 @@ map("n", "<leader>r", "<CMD>Neotree reveal<CR>")
 
 -- Telescope
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
+map("n", "<leader>df", "<cmd>Telescope find_files hidden=true<cr>")
 map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
 map("n", "<leader>fb", "<cmd>Telescope buffers initial_mode=normal<cr>")
 map("n", "<leader>fs", "<cmd>Telescope git_status<cr>")
