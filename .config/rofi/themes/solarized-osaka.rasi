@@ -2,8 +2,8 @@
 /*****----- Color Palette (Solarized Osaka) -----*****/
 * {
     primary-color:               #b58900;
-    secondary-color:             #2176c7;
-    background-color:            #0a1a1f;   /* Base */
+    secondary-color:             #2a8ad2;
+    background-color:            #001b1f;
     text-color:                  #d0d7df;   /* Text */
     foreground-color:            #132b32;    /* Surface0 */
 
