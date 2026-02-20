@@ -25,6 +25,7 @@ return {
           "clangd",
           "rust_analyzer",
           "svelte",
+          "bashls"
         },
       })
     end,

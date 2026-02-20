@@ -1,4 +1,12 @@
 {
-  "theme": "solarized-osaka",
-  "waybar-theme": "dark"
+  "theme": "monochrome",
+  "waybar-theme": "dark",
+  "wallpaper": {
+    "monochrome": "/home/projectblack/wallpaper/a_city_skyline_seen_through_a_window.jpg",
+    "tokyo-night": "/home/projectblack/wallpaper/wallpaper3-dark.png",
+    "catppuccin-mocha": "/home/projectblack/wallpaper/voyager-15.jpg",
+    "gruvbox": "/home/projectblack/wallpaper/platform.jpg",
+    "solarized-osaka": "/home/projectblack/wallpaper/a_crane_with_a_light_on_top.png",
+    "matugen": "/home/projectblack/wallpaper/1016448.jpg"
+  }
 }

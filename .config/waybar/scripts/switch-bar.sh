@@ -20,7 +20,7 @@ for b in "${bars[@]}"; do
 done
 
 # Show menu
-choice=$(echo -e "$menu" | rofi -dmenu -i -p "Select Bar Style")
+choice=$(echo -e "$menu" | rofi -dmenu -i -p "Waybar:")
 
 # Exit if nothing picked
 [ -z "$choice" ] && exit 0

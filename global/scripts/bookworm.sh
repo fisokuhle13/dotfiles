@@ -7,7 +7,7 @@ BOOKS_DIR="$HOME/Books"
 choice=$(
   find "$BOOKS_DIR" -type f -iname "*.pdf" |
     awk -F/ '{print "📚 " $NF "\t" $0}' |
-    rofi -dmenu -i -no-show-icons -p "Books:" |
+    rofi -dmenu -i -no-show-icons -p "📖:" |
     cut -f2-
 )
 

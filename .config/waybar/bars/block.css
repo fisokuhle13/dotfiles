@@ -75,12 +75,12 @@ window#waybar.hidden {
 
 #tray {
   font-size: 12px;
-  margin: 0 12 0 12px;
+  margin: 0 12px 0 12px;
   padding: 0;
 }
 
 #taskbar {
-  margin-left: 0;
+  margin-left: 12px;
 }
 
 #battery.discharging {

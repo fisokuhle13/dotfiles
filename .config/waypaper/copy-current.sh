@@ -31,6 +31,15 @@ SETTINGS="$HOME/dotfiles/global/settings.json"
 # Read theme from JSON
 THEME=$(jq -r '.theme' "$SETTINGS")
 
+THEME_WALLPAPER_KEY=".wallpaper.\"$THEME\""
+
+# # Write wallpaper path to Settings (JSON)
+jq --arg theme "$THEME" \
+   --arg value "$WALLPAPER" \
+   '.wallpaper[$theme] = $value' \
+   "$SETTINGS" > "$SETTINGS.tmp" && mv "$SETTINGS.tmp" "$SETTINGS"
+
+
 if [ "$THEME" == "matugen" ]; then
   echo ":: Execute matugen with $HOME/dotfiles/global/current_wallpaper.png"
 

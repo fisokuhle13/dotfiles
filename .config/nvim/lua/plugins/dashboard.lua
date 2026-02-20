@@ -8,7 +8,8 @@ return {
       local dailyMotivation = {
         "“All great men before us - began somewhere”",
         "“Amateurs wait for inspiration. We just get to work — and refine.”",
-        "“I am just an extreme example of what a hard working man can archive”"
+        "“I am just an extreme example of what a hard working man can archive”",
+        "“🖕🏾 Fuck Cursor - I am a software developer 🧑🏾‍💻”"
       }
       local randomMotivationIndex = math.random(1, #dailyMotivation)
       require("dashboard").setup({
