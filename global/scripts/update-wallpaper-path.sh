@@ -68,11 +68,8 @@ else
     fi
 fi
 
-# ────────────────────────────────────────────────
-#  Final feedback
-# ────────────────────────────────────────────────
-echo "Updated waypaper config → folder = $FINAL_DIR"
-notify-send -u low -i "$ICON" "Waypaper directory updated" \
-    "Now using:\n$FINAL_DIR\n\n$MSG"
+# echo "Updated waypaper config → folder = $FINAL_DIR"
+# notify-send -u low -i "$ICON" "Waypaper directory updated" \
+#     "Now using:\n$FINAL_DIR\n\n$MSG"
 
 exit 0

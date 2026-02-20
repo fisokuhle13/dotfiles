@@ -68,3 +68,6 @@ link_theme "$HOME/.config/wlogout/themes/${THEME}.css" \
             "Wlogout"
 
 echo ">> Theme switch complete."
+
+
+notify-send -u low -i "🎨" "Theme Updated" "$THEME applied successfully."
