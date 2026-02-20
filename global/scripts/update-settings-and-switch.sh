@@ -27,6 +27,9 @@ echo "Updated settings.json with theme: $choice_name"
 # Update wallpaper
 "$HOME/dotfiles/global/scripts/update-wallpaper.sh"
 
+# Update wallpaper path
+"$HOME/dotfiles/global/scripts/update-wallpaper-path.sh"
+
 # Call theme-switcher
 "$HOME/dotfiles/global/scripts/theme-switcher.sh"
 

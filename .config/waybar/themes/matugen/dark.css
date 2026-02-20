@@ -3,10 +3,10 @@
 /* ------------------------*/
 
 /* Core colors from Matugen JSON */
-@define-color bg_main #1a1111;          /* Background */
-@define-color text_main #f0dedd;    /* Main text */
-@define-color accent #ffb3af;          /* Accent / highlight */
+@define-color bg_main #0f1417;          /* Background */
+@define-color text_main #dee3e6;    /* Main text */
+@define-color accent #8ad0ee;          /* Accent / highlight */
 
-@define-color battery_critical #ffb4ac;
-@define-color battery_charging #b7d085;
+@define-color battery_critical #ffb2b9;
+@define-color battery_charging #95d5a7;
 @define-color overlay rgba(255,255,255,0.1);
