@@ -16,11 +16,11 @@ configuration {
 
 /*****----- Color Palette -----*****/
 * {
-    text-color:                  #dee3e6;
-    primary-color:               #8ad0ee;
-    secondary-color:               #b4cad5;
-    background-color:            #0f1417;
-    light-bg:                    #171c1f;
+    text-color:                  #e3e2e9;
+    primary-color:               #b3c5ff;
+    secondary-color:               #c0c6dd;
+    background-color:            #121318;
+    light-bg:                    #1a1b21;
     font: "JetBrains Mono Nerd Font 14";
 }
 

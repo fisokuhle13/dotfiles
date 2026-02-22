@@ -1,15 +1,11 @@
 * {
     /* Core */
-    background-color:            #1a1b26;   /* bg */
-    light-bg:                    #292e42;   /* bg_highlight */
-    text-color:                  #c0caf5;   /* fg */
 
-    /* Structural UI accent */
     primary-color:               #7aa2f7;   /* blue */
-
-    /* Semantic / secondary */
     secondary-color:             #565f89;   /* comment */
-
+    background-color:            #1a1b26;   /* bg */
+    text-color:                  #c0caf5;   /* fg */
+    foreground-color:                    #292e42;   /* bg_highlight */
 
 }
 

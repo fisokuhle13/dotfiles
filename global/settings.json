@@ -1,12 +1,12 @@
 {
-  "theme": "monochrome",
+  "theme": "catppuccin-mocha",
   "waybar-theme": "dark",
   "wallpaper": {
-    "monochrome": "/home/projectblack/wallpaper/monochrome/keyb2.png",
-    "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/wallhaven-yq587d_3840x2160.png",
-    "catppuccin-mocha": "/home/projectblack/wallpaper/catppuccin-mocha/based.png",
-    "gruvbox": "/home/projectblack/wallpaper/gruvbox/solar-system.jpg",
+    "monochrome": "/home/projectblack/wallpaper/monochrome/a_dock_on_the_water.jpeg",
+    "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/wallpaper_nord_1.png",
+    "catppuccin-mocha": "/home/projectblack/wallpaper/catppuccin-mocha/voyager-15.jpg",
+    "gruvbox": "/home/projectblack/wallpaper/gruvbox/platform.jpg",
     "solarized-osaka": "/home/projectblack/wallpaper/solarized-osaka/a_crane_with_a_light_on_top.png",
-    "matugen": "/home/projectblack/wallpaper/1016448.jpg"
+    "matugen": "/home/projectblack/wallpaper/matugen/wp6004964-1920x1080-cute-anime-girl-sword-ps4-wallpapers.jpg"
   }
 }
