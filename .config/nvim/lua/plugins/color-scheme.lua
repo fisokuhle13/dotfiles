@@ -1,1 +1,1 @@
-/home/projectblack/.config/nvim/lua/themes/catppuccin-mocha.lua
+/home/projectblack/.config/nvim/lua/themes/tokyo-night.lua
