@@ -102,20 +102,18 @@ window#waybar.hidden {
   padding-right: 10px;
 }
 
-/* Tray – usually last before clock, tighter */
 #tray {
-  margin: 0 6px 0 4px;
-  padding: 0 2px;
+  margin: 2px 6px 2px 4px;
   min-width: 0;
+
 }
 
-/* Clock – final accent element with breathing room */
 #clock {
-  margin: 4px 4px 4px 4px;
+  margin: 2px 4px 2px 4px;
   padding: 0 10px;
   color: @accent;
   font-size: 13px;
-  border-left: 1px solid rgba(205, 214, 244, 0.15);
+  /* border-left: 1px solid rgba(205, 214, 244, 0.15); */
 }
 
 /* Battery states */
@@ -142,8 +140,10 @@ window#waybar.hidden {
 }
 
 #taskbar button {
-  margin-right: 12px;
+  margin-right: 6px;
+  padding: 2px 6px;
 }
+
 
 /* -----------------------------------------------------
  * Tooltip Styling
@@ -151,8 +151,7 @@ window#waybar.hidden {
 tooltip {
   border-radius: 8px;
   padding: 12px;
-  background-color: #131822;
-  border: 1px solid rgba(205, 214, 244, 0.15);
+  background-color: @bg_main
 }
 
 tooltip label {

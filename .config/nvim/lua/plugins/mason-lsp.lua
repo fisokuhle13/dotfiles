@@ -165,6 +165,10 @@ return {
           return util.root_pattern("sketch.yaml", ".git")(fname) or vim.fn.getcwd()
         end,
       })
+
+      -- Reduce errors logging
+      vim.lsp.set_log_level("OFF") -- or "WARN" / "ERROR"
     end,
   },
+
 }

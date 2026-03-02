@@ -1,12 +1,12 @@
 {
-  "theme": "tokyo-night",
+  "theme": "gruvbox",
   "waybar-theme": "dark",
   "wallpaper": {
-    "monochrome": "/home/projectblack/wallpaper/monochrome/a_dock_on_the_water.jpeg",
-    "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/wallpaper_nord_1.png",
+    "monochrome": "/home/projectblack/wallpaper/monochrome/wallhaven-kw7j1d_3840x2160.png",
+    "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/wallpaper3-dark.png",
     "catppuccin-mocha": "/home/projectblack/wallpaper/catppuccin-mocha/voyager-15.jpg",
-    "gruvbox": "/home/projectblack/wallpaper/monochrome/a_dock_on_the_water.jpeg",
-    "solarized-osaka": "/home/projectblack/wallpaper/solarized-osaka/a_crane_with_a_light_on_top.png",
+    "gruvbox": "/home/projectblack/wallpaper/gruvbox/1348635-3200x1466-desktop-dual-monitors-alexander-the-great-wallpaper.jpg",
+    "solarized-osaka": "/home/projectblack/wallpaper/solarized-osaka/wp12332137-cat-lofi-wallpapers.png",
     "matugen": "/home/projectblack/wallpaper/matugen/wp6004964-1920x1080-cute-anime-girl-sword-ps4-wallpapers.jpg"
   }
 }
