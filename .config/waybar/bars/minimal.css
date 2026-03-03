@@ -20,7 +20,7 @@ window#waybar {
   background-color: @bg_main;
   transition-property: background-color;
   transition-duration: 0.5s;
-  border-radius: 3px;
+  border-radius: 24px;
 }
 
 window#waybar.hidden {
@@ -110,7 +110,7 @@ window#waybar.hidden {
 
 #clock {
   margin: 2px 4px 2px 4px;
-  padding: 0 10px;
+  padding: 0 4px 0 10px;
   color: @accent;
   font-size: 13px;
   /* border-left: 1px solid rgba(205, 214, 244, 0.15); */

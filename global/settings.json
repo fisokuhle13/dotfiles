@@ -1,10 +1,10 @@
 {
-  "theme": "gruvbox",
+  "theme": "monochrome",
   "waybar-theme": "dark",
   "wallpaper": {
     "monochrome": "/home/projectblack/wallpaper/monochrome/wallhaven-kw7j1d_3840x2160.png",
-    "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/wallpaper3-dark.png",
-    "catppuccin-mocha": "/home/projectblack/wallpaper/catppuccin-mocha/voyager-15.jpg",
+    "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/wallpaper_nord_1.png",
+    "catppuccin-mocha": "/home/projectblack/wallpaper/catppuccin-mocha/flower-branch.png",
     "gruvbox": "/home/projectblack/wallpaper/gruvbox/1348635-3200x1466-desktop-dual-monitors-alexander-the-great-wallpaper.jpg",
     "solarized-osaka": "/home/projectblack/wallpaper/solarized-osaka/wp12332137-cat-lofi-wallpapers.png",
     "matugen": "/home/projectblack/wallpaper/matugen/wp6004964-1920x1080-cute-anime-girl-sword-ps4-wallpapers.jpg"

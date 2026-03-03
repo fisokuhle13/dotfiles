@@ -11,8 +11,6 @@ return {
         tweak_background = {
           normal = "none",
           telescope = "none",
-          menu = "default",
-          popup = "default",
         },
 
         tweak_highlight = {
@@ -67,6 +65,12 @@ return {
       })
 
       vim.cmd.colorscheme("lackluster")
+
+      -- Fix cmp icon bg
+      vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
+      vim.api.nvim_set_hl(0, "PmenuSel", { bg = "none", bold = true })
+      vim.api.nvim_set_hl(0, "CmpItemAbbr", { bg = "none" })
+      vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { bg = "none", bold = true })
     end,
   },
 }
