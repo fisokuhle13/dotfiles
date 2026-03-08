@@ -1,0 +1,8 @@
+/*****----- Color Palette (Kanagawa) -----*****/
+* {
+    primary-color:               #e6c384;
+    secondary-color:             #7e9cd8;
+    background-color:            #1f1f28;
+    text-color:                  #dcd7ba;
+    foreground-color:            #16161d;
+}

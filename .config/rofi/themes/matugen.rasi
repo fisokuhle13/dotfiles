@@ -21,7 +21,6 @@ configuration {
     secondary-color:               #c0c6dd;
     background-color:            #121318;
     light-bg:                    #1a1b21;
-    font: "JetBrains Mono Nerd Font 14";
 }
 
 /*****----- Main Window -----*****/

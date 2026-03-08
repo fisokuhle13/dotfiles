@@ -1,0 +1,10 @@
+/* ------------------------*/
+/* Light Kanagawa  */
+/* ------------------------*/
+
+@define-color bg_main rgba(243, 239, 220, 0.6);
+@define-color text_main #1f1f28;
+@define-color accent #c0a36e;
+@define-color battery_critical rgba(232, 36, 36, 1);
+@define-color battery_charging #98bb6c;
+@define-color overlay rgba(220, 215, 186, 0.6);
