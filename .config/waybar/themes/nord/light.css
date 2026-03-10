@@ -1,0 +1,10 @@
+/* ------------------------*/
+/* Light Nord */
+/* ------------------------*/
+
+@define-color bg_main rgba(236, 239, 244, 0.6);
+@define-color text_main #2E3440;
+@define-color accent #81A1C1;
+@define-color battery_critical rgba(191, 97, 106, 1);
+@define-color battery_charging #A3BE8C;
+@define-color overlay rgba(46, 52, 64, 0.6);

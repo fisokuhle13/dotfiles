@@ -1,5 +1,5 @@
 {
-  "theme": "kanagawa",
+  "theme": "nord",
   "waybar-theme": "dark",
   "wallpaper": {
     "monochrome": "/home/projectblack/wallpaper/monochrome/a_city_skyline_seen_through_a_window.jpg",
@@ -8,6 +8,7 @@
     "gruvbox": "/home/projectblack/wallpaper/gruvbox/1348635-3200x1466-desktop-dual-monitors-alexander-the-great-wallpaper.jpg",
     "solarized-osaka": "/home/projectblack/wallpaper/solarized-osaka/a_crane_with_a_light_on_top.png",
     "matugen": "/home/projectblack/wallpaper/matugen/wp6004964-1920x1080-cute-anime-girl-sword-ps4-wallpapers.jpg",
-    "kanagawa": "/home/projectblack/wallpaper/kanagawa/1861279.jpg"
+    "kanagawa": "/home/projectblack/wallpaper/kanagawa/mountains-retreat.jpg",
+    "nord": "/home/projectblack/wallpaper/nord/11356502.png"
   }
 }

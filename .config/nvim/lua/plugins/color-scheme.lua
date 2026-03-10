@@ -1,1 +1,1 @@
-/home/projectblack/.config/nvim/lua/themes/kanagawa.lua
+/home/projectblack/.config/nvim/lua/themes/nord.lua

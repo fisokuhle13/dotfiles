@@ -1,0 +1,8 @@
+/*****----- Color Palette (Nord) -----*****/
+* {
+    primary-color:       #81A1C1;
+    secondary-color:     #B48EAD;
+    background-color:    #2E3440;
+    text-color:          #D8DEE9;
+    foreground-color:    #3B4252;
+}
