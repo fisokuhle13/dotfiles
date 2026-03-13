@@ -1,0 +1,10 @@
+/* ------------------------*/
+/* Light Dracula */
+/* ------------------------*/
+
+@define-color bg_main rgba(248, 248, 242, 0.6);
+@define-color text_main #282a36;
+@define-color accent #bd93f9;
+@define-color battery_critical rgba(255, 85, 85, 1);
+@define-color battery_charging #50fa7b;
+@define-color overlay rgba(40, 42, 54, 0.6);

@@ -1,14 +1,15 @@
 {
-  "theme": "nord",
+  "theme": "dracula",
   "waybar-theme": "dark",
   "wallpaper": {
     "monochrome": "/home/projectblack/wallpaper/monochrome/a_city_skyline_seen_through_a_window.jpg",
-    "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/wallhaven-yq587d_3840x2160.png",
+    "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/wallpaper_nord_1.png",
     "catppuccin-mocha": "/home/projectblack/wallpaper/catppuccin-mocha/flower-branch.png",
     "gruvbox": "/home/projectblack/wallpaper/gruvbox/1348635-3200x1466-desktop-dual-monitors-alexander-the-great-wallpaper.jpg",
     "solarized-osaka": "/home/projectblack/wallpaper/solarized-osaka/a_crane_with_a_light_on_top.png",
     "matugen": "/home/projectblack/wallpaper/matugen/wp6004964-1920x1080-cute-anime-girl-sword-ps4-wallpapers.jpg",
     "kanagawa": "/home/projectblack/wallpaper/kanagawa/mountains-retreat.jpg",
-    "nord": "/home/projectblack/wallpaper/nord/11356502.png"
+    "nord": "/home/projectblack/wallpaper/nord/mountain_jaws.jpg",
+    "dracula": "/home/projectblack/wallpaper/dracula/wallpaperbetter.com_1920x1080.jpg"
   }
 }

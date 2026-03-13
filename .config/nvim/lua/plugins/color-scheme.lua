@@ -1,1 +1,1 @@
-/home/projectblack/.config/nvim/lua/themes/nord.lua
+/home/projectblack/.config/nvim/lua/themes/dracula.lua
