@@ -21,11 +21,11 @@ return {
 
           ["@string"] = { italic = true },
 
-          -- function definitions
           ["@function"] = { italic = true },
+          ["@statement"] = { italic = true },
           ["@method"] = { italic = true },
 
-          -- function / method calls (this was missing)
+          -- function / method calls
           ["@function.call"] = { italic = true },
           ["@method.call"] = { italic = true },
 
@@ -66,11 +66,29 @@ return {
 
       vim.cmd.colorscheme("lackluster")
 
-      -- Fix cmp icon bg
-      vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
-      vim.api.nvim_set_hl(0, "PmenuSel", { bg = "none", bold = true })
-      vim.api.nvim_set_hl(0, "CmpItemAbbr", { bg = "none" })
-      vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { bg = "none", bold = true })
+      -- utility: inherit highlight, remove only background
+      local function remove_bg(group)
+        local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = group, link = false })
+        if not ok or not hl then return end
+
+        hl.bg = nil
+        vim.api.nvim_set_hl(0, group, hl)
+      end
+
+
+      local groups = {
+        "CmpItemAbbr",
+        "CmpItemAbbrMatch",
+        "CmpItemAbbrMatchFuzzy",
+        "CmpItemKind",
+        "CmpItemKindSnippet",
+        "Pmenu",
+        "PmenuSel"
+      }
+
+      for _, group in ipairs(groups) do
+        remove_bg(group)
+      end
     end,
   },
 }

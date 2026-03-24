@@ -1,0 +1,10 @@
+/* ------------------------*/
+/* Rosé Pine Light */
+/* ------------------------*/
+
+@define-color bg_main rgba(224, 222, 244, 0.6);
+@define-color text_main #191724;
+@define-color accent #c4a7e7;
+@define-color battery_critical #eb6f92;
+@define-color battery_charging #31748f;
+@define-color overlay rgba(25, 23, 36, 0.1);

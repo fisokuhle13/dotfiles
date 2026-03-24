@@ -1,7 +1,7 @@
 /*****----- Color Palette (Dracula) -----*****/
 * {
-    primary-color:       #bd93f9;
-    secondary-color:     #ff79c6;
+    primary-color:       #ff79c6;
+    secondary-color:     #bd93f9;
     background-color:    #282a36;
     text-color:          #f8f8f2;
     foreground-color:    #21222c;

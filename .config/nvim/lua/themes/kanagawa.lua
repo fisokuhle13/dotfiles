@@ -7,13 +7,24 @@ return {
       transparent = true, -- fully transparent background
       commentStyle = { italic = true },
       keywordStyle = { italic = true },
-      statementStyle = { bold = true },
+      statementStyle = { italic = true },
+      typeStyle = {},
+      dimInactive = false,
+      terminalColors = true,
+      overrides = function(colors)
+        return {}
+      end,
+      theme = "wave",  -- Load "wave" theme
+      background = {   -- map the value of 'background' option to a theme
+        dark = "wave", -- try "dragon" !
+        light = "lotus"
+      },
 
       colors = {
         theme = {
           all = {
             ui = {
-              bg_gutter = "none", -- removes gutter background (LineNr, SignColumn)
+              bg_gutter = "none",
             },
           },
         },
@@ -21,15 +32,28 @@ return {
     },
     config = function(_, opts)
       require("kanagawa").setup(opts)
-      vim.o.termguicolors = true
       vim.cmd([[colorscheme kanagawa]])
 
-      -- remove blink.cmp backgrounds
-      vim.api.nvim_set_hl(0, "CmpItemAbbr", { bg = "none" })
-      vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { bg = "none" })
-      vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { bg = "none" })
-      vim.api.nvim_set_hl(0, "CmpItemKind", { bg = "none" })
-      vim.api.nvim_set_hl(0, "CmpItemKindSnippet", { bg = "none" })
-    end,
+      -- utility: inherit highlight, remove only background
+      local function remove_bg(group)
+        local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = group, link = false })
+        if not ok or not hl then return end
+
+        hl.bg = nil
+        vim.api.nvim_set_hl(0, group, hl)
+      end
+
+      local groups = {
+        "CmpItemAbbr",
+        "CmpItemAbbrMatch",
+        "CmpItemAbbrMatchFuzzy",
+        "CmpItemKind",
+        "CmpItemKindSnippet",
+      }
+
+      for _, group in ipairs(groups) do
+        remove_bg(group)
+      end
+    end
   },
 }

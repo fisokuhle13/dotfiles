@@ -1,15 +1,16 @@
 {
-  "theme": "dracula",
+  "theme": "rose-pine",
   "waybar-theme": "dark",
   "wallpaper": {
-    "monochrome": "/home/projectblack/wallpaper/monochrome/a_city_skyline_seen_through_a_window.jpg",
-    "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/wallpaper_nord_1.png",
-    "catppuccin-mocha": "/home/projectblack/wallpaper/catppuccin-mocha/flower-branch.png",
-    "gruvbox": "/home/projectblack/wallpaper/gruvbox/1348635-3200x1466-desktop-dual-monitors-alexander-the-great-wallpaper.jpg",
+    "monochrome": "/home/projectblack/wallpaper/monochrome/wallhaven-p8e629_3840x2160.png",
+    "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/wallpaper3-dark.png",
+    "catppuccin-mocha": "/home/projectblack/wallpaper/catppuccin-mocha/map.png",
+    "gruvbox": "/home/projectblack/wallpaper/gruvbox/satellite.jpg",
     "solarized-osaka": "/home/projectblack/wallpaper/solarized-osaka/a_crane_with_a_light_on_top.png",
     "matugen": "/home/projectblack/wallpaper/matugen/wp6004964-1920x1080-cute-anime-girl-sword-ps4-wallpapers.jpg",
-    "kanagawa": "/home/projectblack/wallpaper/kanagawa/mountains-retreat.jpg",
-    "nord": "/home/projectblack/wallpaper/nord/mountain_jaws.jpg",
-    "dracula": "/home/projectblack/wallpaper/dracula/wallpaperbetter.com_1920x1080.jpg"
+    "kanagawa": "/home/projectblack/wallpaper/kanagawa/wallpaperbetter.com_1920x1080(4).jpg",
+    "nord": "/home/projectblack/wallpaper/kanagawa/1861279.jpg",
+    "dracula": "/home/projectblack/wallpaper/dracula/wallpaperbetter.com_1920x1080.jpg",
+    "rose-pine": "/home/projectblack/wallpaper/rose-pine/wallhaven-k81oj1_3840x2160.png"
   }
 }

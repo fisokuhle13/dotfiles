@@ -10,14 +10,31 @@ return {
       vim.o.termguicolors = true
       vim.cmd([[colorscheme nord]])
 
-      -- Fix cmp icon bg
-      vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
-      vim.api.nvim_set_hl(0, "PmenuSel", { bg = "none", bold = true })
-      vim.api.nvim_set_hl(0, "CmpItemAbbr", { bg = "none" })
-      vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { bg = "none", bold = true })
-      vim.api.nvim_set_hl(0, "FloatBorder", { link = "Type" })
-
       vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#4C566A", bg = "none" })
+
+      -- utility: inherit highlight, remove only background
+      local function remove_bg(group)
+        local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = group, link = false })
+        if not ok or not hl then return end
+
+        hl.bg = nil
+        vim.api.nvim_set_hl(0, group, hl)
+      end
+
+
+      local groups = {
+        "CmpItemAbbr",
+        "CmpItemAbbrMatch",
+        "CmpItemAbbrMatchFuzzy",
+        "CmpItemKind",
+        "CmpItemKindSnippet",
+        "Pmenu",
+        "PmenuSel"
+      }
+
+      for _, group in ipairs(groups) do
+        remove_bg(group)
+      end
     end,
   },
 }

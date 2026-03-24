@@ -1,0 +1,8 @@
+/*****----- Color Palette (Rosé Pine) -----*****/
+* {
+    primary-color:               #c4a7e7;  /* magenta */
+    secondary-color:             #9ccfd8;  /* blue */
+    background-color:            #191724;  /* background */
+    text-color:                  #e0def4;  /* foreground */
+    foreground-color:            #26233a;  /* color0 (surface) */
+}

@@ -15,27 +15,13 @@ return {
       no_italic = false,
       no_bold = false,
       no_underline = false,
-      styles = {
-        comments = { "italic" },
-        conditionals = { "italic" },
-        loops = {},
-        functions = {},
-        keywords = {},
-        strings = {},
-        variables = {},
-        numbers = {},
-        booleans = {},
-        properties = {},
-        types = {},
-        operators = {},
-      },
       integrations = {
         cmp = true,
         gitsigns = true,
         nvimtree = true,
         treesitter = true,
-        bufferline = true, -- ✅ enable bufferline integration
-        notify = false,
+        bufferline = true,
+        notify = true,
         mini = { enabled = true },
       },
     },
@@ -43,7 +29,7 @@ return {
       -- setup plugin
       require("catppuccin").setup(opts)
 
-      -- safely apply colorscheme
+      -- apply colorscheme
       local ok, _ = pcall(vim.cmd, "colorscheme catppuccin")
       if not ok then
         vim.o.termguicolors = true
@@ -53,11 +39,52 @@ return {
       -- === Custom Highlights ===
       local cp = require("catppuccin.palettes").get_palette(opts.flavour)
 
-      -- Diagnostics - squiggly underline
-      vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true, sp = cp.red })
-      vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = true, sp = cp.yellow })
-      vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { undercurl = true, sp = cp.blue })
-      vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = true, sp = cp.teal })
+
+      local function patch(group, opts)
+        local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = group, link = false })
+        if not ok or not hl then return end
+
+        for k, v in pairs(opts) do
+          hl[k] = v
+        end
+
+        vim.api.nvim_set_hl(0, group, hl)
+      end
+
+      -- diagnostics (undercurl + color)
+      patch("DiagnosticUnderlineError", { undercurl = true, sp = cp.red })
+      patch("DiagnosticUnderlineWarn", { undercurl = true, sp = cp.yellow })
+      patch("DiagnosticUnderlineInfo", { undercurl = true, sp = cp.blue })
+      patch("DiagnosticUnderlineHint", { undercurl = true, sp = cp.teal })
+
+      -- utility: inherit highlight, only add italic
+      local function italicize(group)
+        local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = group, link = false })
+        if not ok or not hl then return end
+        hl.italic = true
+        vim.api.nvim_set_hl(0, group, hl)
+      end
+
+      -- apply italics (standard + treesitter)
+      local groups = {
+        -- core
+        "Comment",
+        "String",
+        "Statement",
+        "Keyword",
+        "Repeat",
+
+        -- treesitter
+        "@comment",
+        "@string",
+        "@keyword",
+        "@keyword.repeat",
+        "@keyword.return",
+      }
+
+      for _, group in ipairs(groups) do
+        italicize(group)
+      end
     end,
   },
 }
