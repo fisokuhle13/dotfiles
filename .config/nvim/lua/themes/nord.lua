@@ -10,6 +10,8 @@ return {
       vim.o.termguicolors = true
       vim.cmd([[colorscheme nord]])
 
+      require("themes.utils.utils").custom_italic()
+
       vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#4C566A", bg = "none" })
 
       -- utility: inherit highlight, remove only background

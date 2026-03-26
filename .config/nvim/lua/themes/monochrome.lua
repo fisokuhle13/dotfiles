@@ -13,46 +13,6 @@ return {
           telescope = "none",
         },
 
-        tweak_highlight = {
-          -- core semantic hierarchy
-          ["comment"] = { italic = true },
-          ["@comment"] = { italic = true },
-          ["@comment.documentation"] = { italic = true },
-
-          ["@string"] = { italic = true },
-
-          ["@function"] = { italic = true },
-          ["@statement"] = { italic = true },
-          ["@method"] = { italic = true },
-
-          -- function / method calls
-          ["@function.call"] = { italic = true },
-          ["@method.call"] = { italic = true },
-
-          ["@type"] = { bold = true },
-          ["@keyword"] = {},
-
-          -- conversational signals
-          ["@variable.unused"] = { italic = true },
-          ["@parameter.unused"] = { italic = true },
-
-          -- diagnostics: whisper only
-          ["diagnostichint"] = { italic = true },
-          ["diagnosticinfo"] = { italic = true },
-          ["diagnosticwarn"] = { undercurl = true },
-          ["diagnosticerror"] = { undercurl = true },
-
-          -- meta-commentary
-          ["todo"] = { italic = true, undercurl = true },
-          ["@comment.todo"] = { italic = true, undercurl = true },
-          ["@comment.warning"] = { italic = true, undercurl = true },
-          ["@comment.note"] = { italic = true },
-
-          -- lsp / documentation
-          ["lspsignatureactiveparameter"] = { italic = true },
-          ["@markup.heading"] = { bold = true },
-          ["@markup.italic"] = { italic = true },
-        },
 
         tweak_ui = {
           disable_undercurl = false,
@@ -83,12 +43,23 @@ return {
         "CmpItemKind",
         "CmpItemKindSnippet",
         "Pmenu",
-        "PmenuSel"
+        "PmenuSel",
+
+        -- trouble.nvim
+        "TroubleNormal",
+        "TroubleNormalNC",
+        "TroublePreview",
+        "TroublePreviewBorder",
+        "TroubleCount",
+        "TroubleLocation",
+        "TroubleFile",
       }
 
       for _, group in ipairs(groups) do
         remove_bg(group)
       end
+
+      require("themes.utils.utils").custom_italic()
     end,
   },
 }

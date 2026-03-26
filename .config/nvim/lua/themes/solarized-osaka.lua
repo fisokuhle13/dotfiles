@@ -14,6 +14,8 @@ return {
 
       vim.o.termguicolors = true
       vim.cmd([[colorscheme solarized-osaka]])
+
+      require("themes.utils.utils").custom_italic()
     end,
   },
 }
