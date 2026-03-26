@@ -1,0 +1,10 @@
+/* ------------------------*/
+/* Everforest Dark */
+/* ------------------------*/
+
+@define-color bg_main rgba(43, 51, 57, 0.8);
+@define-color text_main #d3c6aa;
+@define-color accent #a7c080;
+@define-color battery_critical #e67e80;
+@define-color battery_charging #a7c080;
+@define-color overlay rgba(211, 198, 170, 0.1);
