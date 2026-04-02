@@ -10,7 +10,6 @@ return {
       vim.o.termguicolors = true
       vim.cmd([[colorscheme nord]])
 
-      require("themes.utils.utils").custom_italic()
 
       vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#4C566A", bg = "none" })
 
@@ -31,12 +30,16 @@ return {
         "CmpItemKind",
         "CmpItemKindSnippet",
         "Pmenu",
-        "PmenuSel"
+        "PmenuSel",
+        "CmpItemKindDefault",
+        "CmpItemMenu",
       }
 
       for _, group in ipairs(groups) do
         remove_bg(group)
       end
+
+      require("themes.utils.utils").custom_italic()
     end,
   },
 }

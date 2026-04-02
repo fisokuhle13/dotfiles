@@ -8,7 +8,6 @@ return {
     vim.cmd("colorscheme everforest")
 
 
-    require("themes.utils.utils").custom_italic()
 
     local function remove_bg(group)
       local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = group, link = false })
@@ -57,5 +56,7 @@ return {
     for _, group in ipairs(groups) do
       remove_bg(group)
     end
+
+    require("themes.utils.utils").custom_italic()
   end,
 }

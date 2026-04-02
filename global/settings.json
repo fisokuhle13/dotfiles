@@ -1,16 +1,18 @@
 {
-  "theme": "rose-pine",
+  "theme": "catppuccin",
   "waybar-theme": "dark",
   "wallpaper": {
-    "monochrome": "/home/projectblack/wallpaper/monochrome/wallhaven-p8e629_3840x2160.png",
-    "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/wallpaper3-dark.png",
-    "catppuccin-mocha": "/home/projectblack/wallpaper/catppuccin-mocha/map.png",
-    "gruvbox": "/home/projectblack/wallpaper/gruvbox/satellite.jpg",
-    "solarized-osaka": "/home/projectblack/wallpaper/solarized-osaka/a_crane_with_a_light_on_top.png",
-    "matugen": "/home/projectblack/wallpaper/matugen/wp6004964-1920x1080-cute-anime-girl-sword-ps4-wallpapers.jpg",
-    "kanagawa": "/home/projectblack/wallpaper/kanagawa/wallpaperbetter.com_1920x1080(4).jpg",
-    "nord": "/home/projectblack/wallpaper/kanagawa/1861279.jpg",
-    "dracula": "/home/projectblack/wallpaper/dracula/wallpaperbetter.com_1920x1080.jpg",
-    "rose-pine": "/home/projectblack/wallpaper/rose-pine/wallhaven-k81oj1_3840x2160.png"
+    "monochrome": "/home/projectblack/wallpaper/monochrome/a_plant_in_a_pot.jpg",
+    "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/samurai_original.png",
+    "catppuccin-mocha": "/home/projectblack/wallpaper/catppuccin-mocha/flatppuccin_4k_macchiato_inverted.png",
+    "gruvbox": "/home/projectblack/wallpaper/gruvbox/xavier-cuenca-w4-3.jpg",
+    "solarized-osaka": "/home/projectblack/wallpaper/solarized-osaka/adventurer.png",
+    "matugen": "/home/projectblack/wallpaper/rose-pine/river-tree.jpg",
+    "kanagawa": "/home/projectblack/wallpaper/kanagawa/Delight_2-Cosmic_upscayl_1x_digital-art-4x.jpg",
+    "nord": "/home/projectblack/wallpaper/nord/mountain_jaws.jpg",
+    "dracula": "/home/projectblack/wallpaper/dracula/wp11620622-dracula-theme-wallpapers.png",
+    "rose-pine": "/home/projectblack/wallpaper/rose-pine/leafy.png",
+    "everforest": "/home/projectblack/wallpaper/everforest/13977432.jpg",
+    "catppuccin": "/home/projectblack/wallpaper/catppuccin/flatppuccin_4k_macchiato_inverted.png"
   }
 }

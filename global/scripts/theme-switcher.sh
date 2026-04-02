@@ -67,6 +67,12 @@ link_theme "$HOME/.config/wlogout/themes/${THEME}.css" \
             "$HOME/.config/wlogout/colors.css" \
             "Wlogout"
 
+## Reload all kitty instances
+kill -USR1 $(pgrep kitty)
+
+## Reload all nvim instances
+pkill -USR1 nvim
+
 echo ">> Theme switch complete."
 
 

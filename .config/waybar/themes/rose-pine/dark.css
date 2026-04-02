@@ -2,7 +2,7 @@
 /* Rosé Pine Dark */
 /* ------------------------*/
 
-@define-color bg_main rgba(25, 23, 36, 0.6);
+@define-color bg_main rgba(25, 23, 36, 0.8);
 @define-color text_main #e0def4;
 @define-color accent #c4a7e7;
 @define-color battery_critical #eb6f92;

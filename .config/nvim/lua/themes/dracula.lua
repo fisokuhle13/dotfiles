@@ -12,7 +12,7 @@ return {
         italic_comment = true, -- keep theme default behavior
       })
 
-      vim.cmd([[colorscheme dracula]])
+      vim.cmd.colorscheme("dracula")
 
       require("themes.utils.utils").custom_italic()
     end,

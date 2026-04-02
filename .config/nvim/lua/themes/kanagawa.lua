@@ -54,6 +54,8 @@ return {
       for _, group in ipairs(groups) do
         remove_bg(group)
       end
+      require("themes.utils.utils").custom_italic()
     end
+
   },
 }

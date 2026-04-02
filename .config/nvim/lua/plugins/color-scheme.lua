@@ -1,1 +1,1 @@
-/home/projectblack/.config/nvim/lua/themes/rose-pine.lua
+/home/projectblack/.config/nvim/lua/themes/catppuccin.lua
