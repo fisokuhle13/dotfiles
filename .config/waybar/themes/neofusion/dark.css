@@ -1,0 +1,10 @@
+/* ------------------------*/
+/* Neofusion Dark */
+/* ------------------------*/
+
+@define-color bg_main rgba(7, 15, 28, 0.8);
+@define-color text_main #e0d9c7;
+@define-color accent #ea6847;
+@define-color battery_critical #d943a8;
+@define-color battery_charging #ea6847;
+@define-color overlay rgba(224, 217, 199, 0.1);

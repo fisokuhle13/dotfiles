@@ -1,0 +1,8 @@
+/*****----- Color Palette (Neofusion) -----*****/
+* {
+    primary-color:               #ea6847;
+    secondary-color:             #86dbf5;
+    background-color:            #070f1c;
+    text-color:                  #e0d9c7;
+    foreground-color:            #2f516c;
+}
