@@ -3,10 +3,11 @@ return {
   priority = 1000,
   config = function()
     vim.g.everforest_background = "hard"
-    vim.g.everforest_enable_italic = 1
 
     vim.cmd("colorscheme everforest")
 
+
+    vim.g.everforest_background = "hard"
 
 
     local function remove_bg(group)
@@ -28,6 +29,11 @@ return {
       "MsgArea",
       "FloatBorder",
 
+
+      "NeoTreeNormal",
+      "NeoTreeNormalNC",
+      "NeoTreeWinSeparator",
+      "NeoTreeEndOfBuffer",
 
       "CmpItemAbbr",
       "CmpItemAbbrMatch",
