@@ -23,7 +23,7 @@ return {
 
     require("themes.utils.utils").custom_italic()
 
-    -- Full clean swap: Normal <-> Insert mode in the rose-pine lualine theme
+    -- Swap Normal <-> Insert mode in the rose-pine lualine theme
     local function swap_lualine_modes()
       -- Get the lualine theme that rose-pine just loaded via 'auto'
       local ok, theme = pcall(require, "lualine.themes.rose-pine")

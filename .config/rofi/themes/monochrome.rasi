@@ -3,7 +3,7 @@
 * {
     primary-color:               #aaaaaa;  
     secondary-color:             #666666;  
-    background-color:            #0a0a0a;  
+    background-color:            #090909;  
     text-color:                  #e0e0e0;   
     foreground-color:            #1a1a1a;   
 }

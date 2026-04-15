@@ -11,8 +11,12 @@ return {
       -- Load the extension
       require("telescope").load_extension("media_files")
 
-      -- Optional: tweak settings
       require("telescope").setup({
+        defaults = {
+          preview = {
+            treesitter = false,
+          },
+        },
         extensions = {
           media_files = {
             -- Filetypes to recognize + preview

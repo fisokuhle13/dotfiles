@@ -1,18 +1,19 @@
 {
-  "theme": "catppuccin",
+  "theme": "everforest",
   "waybar-theme": "dark",
   "wallpaper": {
-    "monochrome": "/home/projectblack/wallpaper/monochrome/a_plant_in_a_pot.jpg",
+    "monochrome": "/home/projectblack/wallpaper/monochrome/a_city_skyline_seen_through_a_window.jpg",
     "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/samurai_original.png",
     "catppuccin-mocha": "/home/projectblack/wallpaper/catppuccin-mocha/flatppuccin_4k_macchiato_inverted.png",
-    "gruvbox": "/home/projectblack/wallpaper/gruvbox/xavier-cuenca-w4-3.jpg",
-    "solarized-osaka": "/home/projectblack/wallpaper/solarized-osaka/adventurer.png",
+    "gruvbox": "/home/projectblack/wallpaper/gruvbox/canyon.jpg",
+    "solarized-osaka": "/home/projectblack/wallpaper/solarized-osaka/a_crane_with_a_light_on_top.png",
     "matugen": "/home/projectblack/wallpaper/rose-pine/river-tree.jpg",
-    "kanagawa": "/home/projectblack/wallpaper/kanagawa/Delight_2-Cosmic_upscayl_1x_digital-art-4x.jpg",
+    "kanagawa": "/home/projectblack/wallpaper/kanagawa/wp6327445-minimalist-japanese-wallpapers.jpg",
     "nord": "/home/projectblack/wallpaper/nord/mountain_jaws.jpg",
     "dracula": "/home/projectblack/wallpaper/dracula/wp11620622-dracula-theme-wallpapers.png",
-    "rose-pine": "/home/projectblack/wallpaper/rose-pine/leafy.png",
-    "everforest": "/home/projectblack/wallpaper/everforest/13977432.jpg",
-    "catppuccin": "/home/projectblack/wallpaper/catppuccin/flatppuccin_4k_macchiato_inverted.png"
+    "rose-pine": "/home/projectblack/wallpaper/rose-pine/river-tree.jpg",
+    "everforest": "/home/projectblack/wallpaper/everforest/mist_forest_1.png",
+    "catppuccin": "/home/projectblack/wallpaper/gruvbox/canyon.jpg",
+    "neofusion": "/home/projectblack/wallpaper/neofusion/434530.jpg"
   }
 }

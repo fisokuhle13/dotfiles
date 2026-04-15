@@ -1,1 +1,1 @@
-/home/projectblack/.config/nvim/lua/themes/catppuccin.lua
+/home/projectblack/.config/nvim/lua/themes/everforest.lua
