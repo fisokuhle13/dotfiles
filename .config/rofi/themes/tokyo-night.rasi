@@ -1,11 +1,10 @@
 * {
-    /* Core */
+    /* Tokyo-Night*/
 
-    primary-color:               #7aa2f7;   /* blue */
-    secondary-color:             #565f89;   /* comment */
-    background-color:            #1a1b26;   /* bg */
-    text-color:                  #c0caf5;   /* fg */
-    foreground-color:                    #292e42;   /* bg_highlight */
-
+    primary-color:               #7aa2f7;  
+    secondary-color:             #565f89;  
+    background-color:            #1a1b26;   
+    text-color:                  #c0caf5;   
+    foreground-color:            #292e42;   
 }
 

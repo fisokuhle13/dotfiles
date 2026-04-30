@@ -1,68 +1,68 @@
 return {
-  "sainnhe/everforest",
-  priority = 1000,
-  config = function()
-    vim.g.everforest_background = "hard"
+    "sainnhe/everforest",
+    priority = 1000,
+    config = function()
+        vim.g.everforest_background = "hard"
 
-    vim.cmd("colorscheme everforest")
-
-
-    vim.g.everforest_background = "hard"
+        vim.cmd("colorscheme everforest")
 
 
-    local function remove_bg(group)
-      local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = group, link = false })
-      if not ok or not hl then return end
-
-      hl.bg = nil
-      vim.api.nvim_set_hl(0, group, hl)
-    end
+        vim.g.everforest_background = "hard"
 
 
+        local function remove_bg(group)
+            local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = group, link = false })
+            if not ok or not hl then return end
 
-    local groups = {
-      "Normal",
-      "NormalFloat",
-      "NormalNC",
-      "SignColumn",
-      "EndOfBuffer",
-      "MsgArea",
-      "FloatBorder",
+            hl.bg = nil
+            vim.api.nvim_set_hl(0, group, hl)
+        end
 
 
-      "NeoTreeNormal",
-      "NeoTreeNormalNC",
-      "NeoTreeWinSeparator",
-      "NeoTreeEndOfBuffer",
 
-      "CmpItemAbbr",
-      "CmpItemAbbrMatch",
-      "CmpItemAbbrMatchFuzzy",
-      "CmpItemKind",
-      "CmpItemKindSnippet",
-      "Pmenu",
-      "PmenuSel",
+        local groups = {
+            "Normal",
+            "NormalFloat",
+            "NormalNC",
+            "SignColumn",
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
 
 
-      -- Telescope
-      "TelescopeBorder",
-      "TelescopeNormal",
-      "TelescopePrompt",
-      "TelescopePromptNormal",
-      "TelescopePromptBorder",
-      "TelescopePromptTitle",
-      "TelescopeResultsNormal",
-      "TelescopeResultsBorder",
-      "TelescopeResultsTitle",
-      "TelescopePreviewNormal",
-      "TelescopePreviewBorder",
-      "TelescopePreviewTitle",
-    }
+            "NeoTreeNormal",
+            "NeoTreeNormalNC",
+            "NeoTreeWinSeparator",
+            "NeoTreeEndOfBuffer",
 
-    for _, group in ipairs(groups) do
-      remove_bg(group)
-    end
+            "CmpItemAbbr",
+            "CmpItemAbbrMatch",
+            "CmpItemAbbrMatchFuzzy",
+            "CmpItemKind",
+            "CmpItemKindSnippet",
+            "Pmenu",
+            "PmenuSel",
 
-    require("themes.utils.utils").custom_italic()
-  end,
+
+            -- Telescope
+            "TelescopeBorder",
+            "TelescopeNormal",
+            "TelescopePrompt",
+            "TelescopePromptNormal",
+            "TelescopePromptBorder",
+            "TelescopePromptTitle",
+            "TelescopeResultsNormal",
+            "TelescopeResultsBorder",
+            "TelescopeResultsTitle",
+            "TelescopePreviewNormal",
+            "TelescopePreviewBorder",
+            "TelescopePreviewTitle",
+        }
+
+        for _, group in ipairs(groups) do
+            remove_bg(group)
+        end
+
+        require("themes.utils.utils").custom_italic()
+    end,
 }

@@ -6,5 +6,5 @@
 @define-color text_main #e0e0e0;
 @define-color accent #909090;
 @define-color battery_critical rgba(238, 46, 36, .9);
-@define-color battery_charging#4a4a4a;
+@define-color battery_charging #909090;
 @define-color overlay rgba(255, 255, 255, 0.05);
