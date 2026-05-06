@@ -3,6 +3,6 @@
 # Clipboard history menu with rofi
 # Requires: cliphist, rofi, wl-clipboard (or xclip on X11)
 
-chosen=$(cliphist list | rofi -dmenu -i -p "Clipboard")
+chosen=$(cliphist list | rofi -dmenu -i -p " ")
 
 [ -n "$chosen" ] && cliphist decode <<<"$chosen" | wl-copy

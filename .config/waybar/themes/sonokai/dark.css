@@ -1,0 +1,13 @@
+/* ------------------------*/
+/* Sonakai (Dark) */
+/* ------------------------*/
+
+@define-color bg_main rgba(43, 45, 58, 0.8);
+@define-color text_main #e1e3e4;
+
+@define-color accent #ff6578;
+
+@define-color battery_critical #ff6578;
+@define-color battery_charging #9dd274;
+
+@define-color overlay rgba(255, 255, 255, 0.08);

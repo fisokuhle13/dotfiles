@@ -1,0 +1,8 @@
+* {
+  /* sonokai */
+  primary-color:               #ff6578;
+  secondary-color:             #72cce8;
+  background-color:            #2a2f38;
+  text-color:                  #e1e3e4;
+  foreground-color:            #3a3e4e;
+}

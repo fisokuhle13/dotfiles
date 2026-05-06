@@ -8,12 +8,9 @@ return {
             typeStyle = {},
             dimInactive = false,
             terminalColors = true,
-            overrides = function(colors)
-                return {}
-            end,
             theme = "wave",
             background = {
-                dark = "wave", -- try "dragon" !
+                dark = "wave",
                 light = "lotus"
             },
 
@@ -54,5 +51,5 @@ return {
             require("themes.utils.utils").custom_italic()
         end
 
-    },
+    }
 }

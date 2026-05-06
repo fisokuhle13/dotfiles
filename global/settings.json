@@ -1,20 +1,21 @@
 {
-  "theme": "kanagawa",
+  "theme": "monochrome",
   "waybar-theme": "dark",
   "wallpaper": {
-    "monochrome": "/home/projectblack/wallpaper/monochrome/a_dock_on_the_water.jpeg",
+    "monochrome": "/home/projectblack/wallpaper/monochrome/a_plant_in_a_pot.jpg",
     "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/wallpaper3-dark.png",
     "catppuccin-mocha": "/home/projectblack/wallpaper/catppuccin-mocha/flatppuccin_4k_macchiato_inverted.png",
-    "gruvbox": "/home/projectblack/wallpaper/gruvbox/platform.jpg",
+    "gruvbox": "/home/projectblack/wallpaper/gruvbox/xavier-cuenca-w4-3.jpg",
     "solarized-osaka": "/home/projectblack/wallpaper/solarized-osaka/a_crane_with_a_light_on_top.png",
     "matugen": "/home/projectblack/wallpaper/rose-pine/river-tree.jpg",
     "kanagawa": "/home/projectblack/wallpaper/kanagawa/wallpaperbetter.com_1920x1080(3).jpg",
     "nord": "/home/projectblack/wallpaper/nord/ign_ferrari1.png",
-    "dracula": "/home/projectblack/wallpaper/dracula/Arch\\ Linux\\ (Text\\ Purple).png",
+    "dracula": "/home/projectblack/wallpaper/dracula/wallhaven-qrgvll_3840x2160.png",
     "rose-pine": "/home/projectblack/wallpaper/rose-pine/river-tree.jpg",
     "everforest": "/home/projectblack/wallpaper/everforest/13977432.jpg",
     "catppuccin": "/home/projectblack/wallpaper/catppuccin/map.png",
     "neofusion": "/home/projectblack/wallpaper/neofusion/434530.jpg",
-    "thorn": "/home/projectblack/wallpaper/thorn/bay.jpg"
+    "thorn": "/home/projectblack/wallpaper/thorn/bay.jpg",
+    "sonokai": "/home/projectblack/wallpaper/sonokai/wallhaven-rrvjqq_3840x2160.png"
   }
 }

@@ -1,8 +1,8 @@
 /* ------------------------*/
-/* Dark zenbones (stark) Gray */
+/* Monochrome */
 /* ------------------------*/
 
-@define-color bg_main rgba(4, 4, 4, 0.8);
+@define-color bg_main rgba(8, 8, 8, 0.8);
 @define-color text_main #e0e0e0;
 @define-color accent #909090;
 @define-color battery_critical rgba(238, 46, 36, .9);

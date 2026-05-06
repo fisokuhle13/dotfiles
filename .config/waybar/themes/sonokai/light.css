@@ -1,0 +1,13 @@
+/* ------------------------*/
+/* Sonakai (Light) */
+/* ------------------------*/
+
+@define-color bg_main #e1e3e4;
+@define-color text_main #828a9a;
+
+@define-color accent #ff6578;
+
+@define-color battery_critical #ff6578;
+@define-color battery_charging #9dd274;
+
+@define-color overlay rgba(255, 255, 255, 0.08);
