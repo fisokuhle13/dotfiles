@@ -1,178 +1,179 @@
 {
-  // Workspaces
-  "hyprland/workspaces": {
-    "on-scroll-up": "hyprctl dispatch workspace r-1",
-    "on-scroll-down": "hyprctl dispatch workspace r+1",
-    "on-click": "activate",
-    "active-only": false,
-    "all-outputs": false,
-    "format": "{}",
-    "format-icons": {
-      "urgent": "",
-      "active": " ",
-      "default": " "
+    // Workspaces
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace r-1",
+        "on-scroll-down": "hyprctl dispatch workspace r+1",
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": false,
+        "format": "{}",
+        "format-icons": {
+            "urgent": "",
+            "active": " ",
+            "default": " "
+        },
+        "persistent-workspaces": {
+            "*": 3
+        }
     },
-    "persistent-workspaces": {
-      "*": 3
+    // Taskbar
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 14,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "Alacritty",
+            "kitty"
+        ],
+        "app_ids-mapping": {
+            "firefoxdeveloperedition": "firefox-developer-edition"
+        },
+        "rewrite": {
+            "Firefox Web Browser": "Firefox",
+            "Foot Server": "Terminal"
+        }
+    },
+    // Clock
+    "clock": {
+        "format": "{:%H:%M %a}",
+        "on-click": "gnome-calendar",
+        "timezone": "",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 1,
+        "format": "{icon} {percentage}%",
+        "format-icons": {
+            "default": " "
+        },
+        "on-click": "gnome-system-monitor"
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "{icon} {usage}%",
+        "format-icons": {
+            "default": " "
+        },
+        "tooltip": false,
+        "on-click": "gnome-system-monitor"
+    },
+    "network": {
+        "interval": 1,
+        // "format-wifi": "{icon} {signalStrength}%   {bandwidthUpBytes}   {bandwidthDownBytes}",
+        "format-wifi": "󰖩   {bandwidthUpBytes}   {bandwidthDownBytes}",
+        "format-ethernet": "󰈀   {bandwidthUpBytes}   {bandwidthDownBytes}",
+        "format-disconnected": "󰖪 Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr} {bandwidthDownBits}bps\uf019/{bandwidthUpBits}bps\uf093",
+        "on-click": "~/dotfiles/global/scripts/network.sh",
+        "on-click-right": "~/dotfiles/global/scripts/nm-applet.sh",
+        "format-icons": [
+            "󰤯 ", // Very weak (lowest)
+            "󰤟 ", // Weak
+            "󰤢 ", // Medium-weak
+            "󰤥 ", // Good
+            "󰤨 " // Excellent (highest)
+        ],
+        "fixed-size": 150
+    },
+    // Battery
+    "battery": {
+        "interval": 1,
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": [
+            "󰁺",
+            "󰁻",
+            "󰁾",
+            "󰂁",
+            "󰁹"
+        ]
+    },
+    // Power Profiles Daemon
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": " ",
+            "performance": " ",
+            "balanced": "  ",
+            "power-saver": " "
+        }
+    },
+    "tray": {
+        "spacing": 10,
+        "icon-size": 14,
+    },
+    // Pulseaudio
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-bluetooth-muted": "   {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": " ",
+        "format-icons": {
+            "muted": " ",
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [
+                " ",
+                " ",
+                " "
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    // Bluetooth
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": "",
+        "format-off": "",
+        "interval": 30,
+        "on-click": "blueman-manager",
+        "format-no-controller": ""
+    },
+    // Other
+    "user": {
+        "format": "{user}",
+        "interval": 60,
+        "icon": false
+    },
+    // backlight:
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "scroll-step": 1
     }
-  },
-  // Taskbar
-  "wlr/taskbar": {
-    "format": "{icon}",
-    "icon-size": 14,
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close",
-    "ignore-list": [
-      "Alacritty",
-      "kitty"
-    ],
-    "app_ids-mapping": {
-      "firefoxdeveloperedition": "firefox-developer-edition"
-    },
-    "rewrite": {
-      "Firefox Web Browser": "Firefox",
-      "Foot Server": "Terminal"
-    }
-  },
-  // Clock
-  "clock": {
-    "format": "{:%H:%M %a}",
-    "on-click": "gnome-calendar",
-    "timezone": "",
-    "tooltip": false
-  },
-  "memory": {
-    "interval": 1,
-    "format": "{icon} {percentage}%",
-    "format-icons": {
-      "default": " "
-    },
-    "on-click": "gnome-system-monitor"
-  },
-  "cpu": {
-    "interval": 1,
-    "format": "{icon} {usage}%",
-    "format-icons": {
-      "default": " "
-    },
-    "tooltip": false,
-    "on-click": "gnome-system-monitor"
-  },
-  "network": {
-    "interval": 1,
-    "format-wifi": "   {bandwidthDownBytes}   {bandwidthUpBytes}",
-    "format-ethernet": "󰈀   {bandwidthDownBytes}   {bandwidthUpBytes}",
-    "format-disconnected": "󰖪 Disconnected",
-    "tooltip-format": "{ifname}: {ipaddr}/{cidr} {bandwidthDownBits}bps\uf019/{bandwidthUpBits}bps\uf093",
-    "on-click": "~/dotfiles/global/scripts/network.sh",
-    "on-click-right": "~/dotfiles/global/scripts/nm-applet.sh",
-    "format-icons": {
-      "default": [
-        "\uf0c1",
-        "\uf0c2",
-        "\uf0c3"
-      ]
-    },
-    "fixed-size": 150
-  },
-  // Battery
-  "battery": {
-    "interval": 1,
-    "states": {
-      // "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon} {capacity}%",
-    "format-charging": "󰂄 {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{icon} {time}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    "format-icons": [
-      "󰁺",
-      "󰁻",
-      "󰁾",
-      "󰂁",
-      "󰁹"
-    ]
-  },
-  // Power Profiles Daemon
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": " ",
-      "performance": " ",
-      "balanced": "  ",
-      "power-saver": " "
-    }
-  },
-  "tray": {
-    "spacing": 10,
-    "icon-size": 14,
-  },
-  // Pulseaudio
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-bluetooth": " {volume}%",
-    "format-bluetooth-muted": "   {format_source}",
-    "format-muted": "  {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": " ",
-    "format-icons": {
-      "muted": " ",
-      "headphone": " ",
-      "hands-free": " ",
-      "headset": " ",
-      "phone": " ",
-      "portable": " ",
-      "car": " ",
-      "default": [
-        " ",
-        " ",
-        " "
-      ]
-    },
-    "on-click": "pavucontrol"
-  },
-  // Bluetooth
-  "bluetooth": {
-    "format": " {status}",
-    "format-disabled": "",
-    "format-off": "",
-    "interval": 30,
-    "on-click": "blueman-manager",
-    "format-no-controller": ""
-  },
-  // Other
-  "user": {
-    "format": "{user}",
-    "interval": 60,
-    "icon": false
-  },
-  // backlight:
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "scroll-step": 1
-  }
 }

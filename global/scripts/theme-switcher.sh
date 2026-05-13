@@ -29,8 +29,8 @@ link_theme() {
 }
 
 ### Hyprland
-link_theme "$HOME/dotfiles/global/hypr-general/${THEME}.conf" \
-            "$HOME/.config/hypr/conf/deco-general.conf" \
+link_theme "$HOME/dotfiles/.config/hypr/conf/hypr-border/${THEME}.lua" \
+            "$HOME/.config/hypr/conf/border-deco.lua" \
             "Hyprland"
 
 ### Kitty

@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 SETTINGS="$HOME/dotfiles/global/settings.json"
-HYPR_DIR="$HOME/dotfiles/global/hypr-general"
+HYPR_DIR="$HOME/dotfiles/.config/hypr/conf/hypr-border"
 ICON="󰨇 " # fixed Nerd Font paint palette icon
 
 # List themes
-themes=($(ls "$HYPR_DIR"/*.conf 2>/dev/null | xargs -n1 basename | sed 's/\.conf$//'))
+themes=($(ls "$HYPR_DIR"/*.lua 2>/dev/null | xargs -n1 basename | sed 's/\.lua$//'))
 
 # Add icon for display
 themes_with_icons=()

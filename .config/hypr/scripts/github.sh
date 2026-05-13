@@ -16,8 +16,8 @@ done
 if [ -S "$SSH_AUTH_SOCK" ]; then
     if ! ssh-add -l 2>/dev/null | grep -q "$KEY"; then
         ssh-add "$KEY" >/dev/null 2>&1
-        echo "✅ GitHub SSH key added to agent"
+        echo " GitHub SSH key added to agent"
     fi
 else
-    echo "⚠️ SSH agent socket not found at $SSH_AUTH_SOCK"
+    echo " SSH agent socket not found at $SSH_AUTH_SOCK"
 fi
