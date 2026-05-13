@@ -12,12 +12,8 @@ hl.window_rule({
 hl.window_rule({
     name = "fix-xwayland-drags",
     match = {
-        class = "^$",
-        title = "^$",
         xwayland = true,
         float = true,
-        fullscreen = false,
-        pin = false,
     },
     no_focus = true,
 })
@@ -37,7 +33,7 @@ local function float_app(name, opts)
     opts = opts or {}
     hl.window_rule({
         name = name,
-        match = { class = opts.class },
+        match = { class = opts.class or ".*" },
         float = true,
         size = opts.size,
         center = opts.center,
@@ -48,8 +44,8 @@ end
 
 -- Pavucontrol
 float_app("pavucontrol", {
-    class = "^org%.pulseaudio%.pavucontrol$",
-    size = "700 600",
+    class = "^org\\.pulseaudio\\.pavucontrol$",
+    size = { 700, 600 },
     center = true,
     pin = true,
 })
@@ -57,30 +53,30 @@ float_app("pavucontrol", {
 -- Waypaper
 float_app("waypaper", {
     class = "^waypaper$",
-    size = "700 600",
+    size = { 700, 600 },
     center = true,
     pin = true,
 })
 
 -- Blueman
 float_app("blueman", {
-    class = "^blueman%-manager$",
-    size = "800 600",
+    class = "^blueman-manager$",
+    size = { 800, 600 },
     center = true,
 })
 
 -- nwg-look
 float_app("nwg-look", {
-    class = "^nwg%-look$",
-    size = "700 600",
+    class = "^nwg-look$",
+    size = { 700, 600 },
     move = "10% 20%",
     pin = true,
 })
 
 -- Mission Center
 float_app("missioncenter", {
-    class = "^io%.missioncenter%.MissionCenter$",
-    size = "900 600",
+    class = "^io\\.missioncenter\\.MissionCenter$",
+    size = { 900, 600 },
     center = true,
     pin = true,
 })
@@ -94,32 +90,31 @@ hl.window_rule({
     float = true,
 })
 
--- Calculator
+-- Calculator + Calendar
 float_app("calculator", {
-    class = "^org%.gnome%.Calculator$",
-    size = "700 600",
+    class = "^org\\.gnome\\.Calculator$",
+    size = { 700, 600 },
     center = true,
 })
 
--- Calendar
 float_app("calendar", {
-    class = "^org%.gnome%.Calendar$",
-    size = "800 800",
+    class = "^org\\.gnome\\.Calendar$",
+    size = { 800, 800 },
     center = true,
 })
 
 -- Share picker
 float_app("share-picker", {
-    class = "^hyprland%-share%-picker$",
-    size = "600 400",
+    class = "^hyprland-share-picker$",
+    size = { 600, 400 },
     center = true,
     pin = true,
 })
 
--- Generic floating apps
+-- Generic floating
 float_app("dotfiles-floating", {
-    class = "^dotfiles%-floating$",
-    size = "900 650",
+    class = "^dotfiles-floating$",
+    size = { 900, 650 },
     center = true,
 })
 
@@ -129,7 +124,7 @@ float_app("dotfiles-floating", {
 
 hl.window_rule({
     name = "evince-opacity",
-    match = { class = "^org%.gnome%.Evince$" },
+    match = { class = "^org\\.gnome\\.Evince$" },
     opacity = "1 1",
 })
 
@@ -143,7 +138,6 @@ hl.window_rule({
 -- ENVIRONMENT
 -------------------
 
--- Desktop identity
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
@@ -159,7 +153,7 @@ hl.env("GDK_SCALE", "1")
 hl.env("GDK_BACKEND", "wayland,x11,*")
 hl.env("CLUTTER_BACKEND", "wayland")
 
--- Mozilla / Electron / Ozone
+-- Mozilla / Electron
 hl.env("MOZ_ENABLE_WAYLAND", "1")
 hl.env("OZONE_PLATFORM", "wayland")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
