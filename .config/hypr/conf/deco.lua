@@ -7,8 +7,8 @@ local colors = require("conf.border-deco")
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in          = 5,
-        gaps_out         = 5,
+        gaps_in          = 2,
+        gaps_out         = 2,
 
         border_size      = 2,
 
@@ -82,6 +82,7 @@ hl.animation({ leaf = "windowsIn", enabled = true, speed = 6.5, bezier = "easeOu
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "easeOutQuint", style = "slide" })
 
 
+
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 4, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeOut", enabled = true, speed = 3.5, bezier = "almostLinear" })
 hl.animation({ leaf = "fade", enabled = true, speed = 4, bezier = "quick" })
@@ -96,28 +97,11 @@ hl.animation({ leaf = "workspacesOut", enabled = true, speed = 5.5, bezier = "ea
 
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 6, bezier = "quick" })
 
--- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
--- "Smart gaps" / "No gaps when only"
--- uncomment all if you wish to use that.
--- hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
--- hl.workspace_rule({ workspace = "f[1]",   gaps_out = 0, gaps_in = 0 })
--- hl.window_rule({
---     name  = "no-gaps-wtv1",
---     match = { float = false, workspace = "w[tv1]" },
---     border_size = 0,
---     rounding    = 0,
--- })
--- hl.window_rule({
---     name  = "no-gaps-f1",
---     match = { float = false, workspace = "f[1]" },
---     border_size = 0,
---     rounding    = 0,
--- })
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
     dwindle = {
-        preserve_split = true, -- You probably want this
+        preserve_split = true,
     },
 })
 

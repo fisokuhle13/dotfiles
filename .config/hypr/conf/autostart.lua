@@ -6,7 +6,7 @@
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("waypaper --restore")
-    hl.exec_cmd("waybar")
+    hl.exec_cmd("[env=XDG_CURRENT_DESKTOP] waybar")
     hl.exec_cmd("hypridle")
 
     -- Cursor
@@ -19,4 +19,5 @@ hl.on("hyprland.start", function()
 
     -- Load GTK settings
     hl.exec_cmd("~/.config/hypr/scripts/gtk.sh")
+    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 end)

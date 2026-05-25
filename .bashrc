@@ -6,6 +6,7 @@
 # Exports
 # -----------------------------------------------------
 export EDITOR=nvim
+export XDG_SESSION_TYPE=wayland
 set -o vi
 
 export PATH="/usr/lib/ccache/bin/:$PATH"

@@ -76,8 +76,9 @@ hl.bind(mainMod .. " + P",
 hl.bind(mainMod .. " + SHIFT + SPACE",
     hl.dsp.layout("swapsplit"))
 
-hl.bind(mainMod .. " + SPACE",
-    hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + SPACE", hl.dsp.layout("togglesplit"))
+
+
 
 ----------------
 -- FOCUS (VIM)--
@@ -119,21 +120,26 @@ hl.bind(mainMod .. " + S",
 hl.bind(mainMod .. " + SHIFT + S",
     hl.dsp.window.move({ workspace = "special:magic" }))
 
--------------------
+----------------
 -- RESIZE WINDOWS --
--------------------
-
+----------------
 hl.bind(mainMod .. " + SHIFT + RIGHT",
-    hl.dsp.exec_cmd("hyprctl dispatch resizeactive 10 0"))
+    hl.dsp.window.resize({ x = 10, y = 0, relative = true }),
+    { repeating = true })
 
 hl.bind(mainMod .. " + SHIFT + LEFT",
-    hl.dsp.exec_cmd("hyprctl dispatch resizeactive -10 0"))
+    hl.dsp.window.resize({ x = -10, y = 0, relative = true }),
+    { repeating = true })
 
 hl.bind(mainMod .. " + SHIFT + DOWN",
-    hl.dsp.exec_cmd("hyprctl dispatch resizeactive 0 10"))
+    hl.dsp.window.resize({ x = 0, y = 10, relative = true }),
+    { repeating = true })
 
 hl.bind(mainMod .. " + SHIFT + UP",
-    hl.dsp.exec_cmd("hyprctl dispatch resizeactive 0 -10"))
+    hl.dsp.window.resize({ x = 0, y = -10, relative = true }),
+    { repeating = true })
+
+
 
 ----------------
 -- GROUPING   --
@@ -145,18 +151,17 @@ hl.bind(mainMod .. " + G",
 ----------------
 -- SWAPWINDOW --
 ----------------
-
 hl.bind(mainMod .. " + SHIFT + H",
-    hl.dsp.exec_cmd("hyprctl dispatch swapwindow l"))
+    hl.dsp.window.swap({ direction = "l" }))
 
 hl.bind(mainMod .. " + SHIFT + L",
-    hl.dsp.exec_cmd("hyprctl dispatch swapwindow r"))
+    hl.dsp.window.swap({ direction = "r" }))
 
 hl.bind(mainMod .. " + SHIFT + K",
-    hl.dsp.exec_cmd("hyprctl dispatch swapwindow u"))
+    hl.dsp.window.swap({ direction = "u" }))
 
 hl.bind(mainMod .. " + SHIFT + J",
-    hl.dsp.exec_cmd("hyprctl dispatch swapwindow d"))
+    hl.dsp.window.swap({ direction = "d" }))
 
 ----------------
 -- ALT TAB    --
@@ -196,6 +201,7 @@ hl.bind(mainMod .. " + mouse:272",
 hl.bind(mainMod .. " + mouse:273",
     hl.dsp.window.resize(),
     { mouse = true })
+
 
 -------------------
 -- AUDIO / BRIGHTNESS

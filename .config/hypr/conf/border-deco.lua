@@ -1,1 +1,1 @@
-/home/projectblack/dotfiles/.config/hypr/conf/hypr-border/solarized-osaka.lua
+/home/projectblack/dotfiles/.config/hypr/conf/hypr-border/catppuccin.lua
