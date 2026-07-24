@@ -17,7 +17,6 @@ return {
                     "cssls",
                     "cssmodules_ls",
                     "html",
-                    "ts_ls",
                     "pylsp",
                     "jsonls",
                     "gopls",
@@ -25,6 +24,11 @@ return {
                     "rust_analyzer",
                     "svelte",
                     "bashls",
+                    "zls",
+                    "vue_ls",
+                    "vtsls",
+                    "ts_ls",
+                    "kotlin_language_server",
                 },
             })
         end,
@@ -60,11 +64,18 @@ return {
             )
 
             local on_attach = function(client, bufnr)
-                -- Might add custom config
             end
 
+            local vue_language_server_path = vim.fn.stdpath("data")
+                .. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
 
-            -- rust_analyzer
+            local vue_plugin = {
+                name = "@vue/typescript-plugin",
+                location = vue_language_server_path,
+                languages = { "vue" },
+                configNamespace = "typescript",
+            }
+
             vim.lsp.config("rust_analyzer", {
                 capabilities = capabilities,
                 on_attach = on_attach,
@@ -76,18 +87,16 @@ return {
                 },
             })
 
-            -- clangd
-            -- vim.lsp.config("clangd", {
-            --     capabilities = capabilities,
-            --     cmd = {
-            --         "clangd",
-            --         "--completion-style=detailed",
-            --         "--header-insertion=never",
-            --         "--function-arg-placeholders=false",
-            --     },
-            -- })
+            vim.lsp.config("clangd", {
+                capabilities = capabilities,
+                cmd = {
+                    "clangd",
+                    "--completion-style=detailed",
+                    "--header-insertion=never",
+                    "--function-arg-placeholders=false",
+                },
+            })
 
-            -- arduino_language_server
             vim.lsp.config("arduino_language_server", {
                 capabilities = capabilities,
                 on_attach = on_attach,
@@ -102,13 +111,65 @@ return {
                 root_dir = require("lspconfig.util").root_pattern("sketch.yaml", ".git"),
             })
 
-            -- Enable all configured LSPs
+            vim.lsp.config("zls", {
+                capabilities = capabilities,
+                on_attach = function(client, bufnr)
+                    client.server_capabilities.documentFormattingProvider = false
+                    client.server_capabilities.documentRangeFormattingProvider = false
+                end,
+                settings = {
+                    zls = {
+                        enable_build_on_save = false,
+                    },
+                },
+            })
+
+            vim.lsp.config("vtsls", {
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = {
+                    vtsls = {
+                        tsserver = {
+                            globalPlugins = { vue_plugin },
+                        },
+                    },
+                },
+                filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+            })
+
+            vim.lsp.config("kotlin_language_server", {
+                cmd = {
+                    "env",
+                    "JAVA_HOME=/usr/lib/jvm/java-21-openjdk",
+                    "PATH=/usr/lib/jvm/java-21-openjdk/bin:" .. vim.env.PATH,
+                    vim.fn.stdpath("data") .. "/mason/bin/kotlin-language-server",
+                },
+
+                capabilities = capabilities,
+                on_attach = on_attach,
+
+                root_dir = function(bufnr, on_dir)
+                    local root = vim.fs.root(bufnr, {
+                        "settings.gradle.kts",
+                        "settings.gradle",
+                        "build.gradle.kts",
+                        "build.gradle",
+                        ".git",
+                    })
+
+                    if root then
+                        on_dir(root)
+                    end
+                end,
+            })
+
+            vim.lsp.enable("kotlin_language_server")
+
             vim.lsp.enable({
                 "lua_ls",
                 "cssls",
                 "cssmodules_ls",
                 "html",
-                "ts_ls",
                 "pylsp",
                 "jsonls",
                 "gopls",
@@ -117,6 +178,11 @@ return {
                 "svelte",
                 "bashls",
                 "arduino_language_server",
+                "zls",
+                "vue_ls",
+                "vtsls",
+                "ts_ls",
+                "kotlin_language_server",
             })
         end,
     },

@@ -1,0 +1,3 @@
+[flavor]
+dark = "base16"
+light = "base16"   # remove this line if you only use dark mode

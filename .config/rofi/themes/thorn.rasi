@@ -1,9 +1,0 @@
-
-* {
-  /* Thorn */
-  primary-color:               #95C2A1;
-  secondary-color:             #86BFD2;
-  background-color:            #1D282F;
-  text-color:                  #DBD0C6;
-  foreground-color:            #223B49;
-}

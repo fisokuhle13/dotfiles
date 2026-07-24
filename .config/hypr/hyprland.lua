@@ -1,9 +1,18 @@
+--  ENVIRONMENT VARIABLES --
+hl.env("_JAVA_AWT_WM_NONEREPARENTING", "1")
+hl.env("XWAYLAND_NO_GLAMOR", "1")
+hl.env("GDK_BACKEND", "wayland,x11")
+hl.env("QT_QPA_PLATFORM", "wayland;xcb")
+hl.env("SDL_VIDEODRIVER", "wayland")
+hl.env("GLFW_IMPLICIT_X11", "0")
+
 -- Load configs
 require("conf.autostart")
-require("conf.deco")
 require("conf.keybindings")
 require("conf.monitors")
 require("conf.windows")
+require("conf.deco")
+
 
 
 

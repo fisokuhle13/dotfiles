@@ -1,0 +1,16 @@
+{
+  "theme": "gruvbox",
+  "waybar-theme": "dark",
+  "wallpaper": {
+    "monochrome": "/home/projectblack/wallpaper/monochrome/a_dock_on_the_water.jpeg",
+    "tokyo-night": "/home/projectblack/wallpaper/tokyo-night/sushi_original.png",
+    "catppuccin-mocha": "/home/projectblack/wallpaper/catppuccin-mocha/flatppuccin_4k_macchiato_inverted.png",
+    "gruvbox": "/home/projectblack/wallpaper/gruvbox/wallhaven-vq1z55_3840x2160.png",
+    "solarized-osaka": "/home/projectblack/wallpaper/solarized-osaka/adventurer.png",
+    "nord": "/home/projectblack/wallpaper/nord/ign_PlasticBeach-1.png",
+    "rose-pine": "/home/projectblack/wallpaper/rose-pine/river-tree.jpg",
+    "everforest": "/home/projectblack/wallpaper/everforest/polyscape_1.png",
+    "catppuccin": "/home/projectblack/wallpaper/catppuccin/wallhaven-ly298y-colorized.png",
+    "sonokai": "/home/projectblack/wallpaper/sonokai/wallhaven-e8wd3k_3840x2160.png"
+  }
+}

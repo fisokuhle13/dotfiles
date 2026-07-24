@@ -99,7 +99,7 @@ float_app("calculator", {
 
 float_app("calendar", {
     class = "^org\\.gnome\\.Calendar$",
-    size = { 800, 800 },
+    size = { 800, 600 },
     center = true,
 })
 

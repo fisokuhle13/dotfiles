@@ -2,8 +2,7 @@
 /* Tokyo Night (Dark) */
 /* ------------------------*/
 
-@define-color bg_main rgba(26, 27, 38, 0.8);
-/* #1a1b26 */
+@define-color bg_main rgba(26, 27, 38, 0.9);
 @define-color text_main #c0caf5;
 
 @define-color accent #7aa2f7;

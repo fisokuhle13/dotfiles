@@ -2,7 +2,7 @@ local colors = {}
 
 colors.col = {
     active_border = {
-        colors = { "rgba(b58900aa)", "rgba(b58900aa)" },
+        colors = { "rgba(69, 156, 222, 0.5)", "rgba(69, 156, 222, 0.5)" },
         angle = 45,
     },
     inactive_border = "rgba(063642aa)",

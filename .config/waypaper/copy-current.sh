@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEST="$HOME/dotfiles/global/current_wallpaper.png"
+DEST="$HOME/dotfiles/src/current_wallpaper.png"
 WAYPAPER_CONFIG="$HOME/.config/waypaper/config.ini"
 
 # Fallback: Read wallpaper from config.ini if $1 is empty
@@ -11,8 +11,8 @@ else
   WALLPAPER="$1"
 fi
 
-# Ensure the global directory exists
-mkdir -p "$HOME/dotfiles/global"
+# Ensure the src directory exists
+mkdir -p "$HOME/dotfiles/src"
 
 # Remove the old wallpaper if it exists
 [ -f "$DEST" ] && rm "$DEST"
@@ -26,7 +26,7 @@ else
 fi
 
 # Change colors if the theme is matugen
-SETTINGS="$HOME/dotfiles/global/settings.json"
+SETTINGS="$HOME/dotfiles/src/settings.json"
 
 # Read theme from JSON
 THEME=$(jq -r '.theme' "$SETTINGS")
@@ -40,12 +40,6 @@ jq --arg theme "$THEME" \
    "$SETTINGS" > "$SETTINGS.tmp" && mv "$SETTINGS.tmp" "$SETTINGS"
 
 
-if [ "$THEME" == "matugen" ]; then
-  echo ":: Execute matugen with $HOME/dotfiles/global/current_wallpaper.png"
-
-  # Call theme-switcher (matugen will be reloaded there)
-  "$HOME/dotfiles/global/scripts/theme-switcher.sh"
-fi
 
 # Verify copy
 if [ -f "$DEST" ]; then

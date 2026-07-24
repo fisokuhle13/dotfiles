@@ -13,7 +13,8 @@ configuration {
     display-window:             "window";
     drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
     window-format:              "{w} · {c} · {t}";
-    font: "JetBrains Mono Nerd Font 12";
+    /** font: "JetBrains Mono Nerd Font 12"; **/
+    font: "FiraCode Nerd Font 12";
 
     filebrowser { directories-first: true;
         sorting-method:    "name";
@@ -36,7 +37,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
-    border-radius:               10px;
+    border-radius:               6px;
     cursor:                      "default";
 }
 
@@ -61,7 +62,7 @@ inputbar {
 
     text-color:                  @text-color;
     background-color:            @foreground-color;
-    border-radius:               10px;
+    border-radius:               6px;
     children:                    [ "prompt", "entry" ];
 }
 
@@ -71,7 +72,7 @@ prompt {
     border:                      0px 1px 0px 0px;
     background-color:            transparent;
     text-color:                  @text-color;
-    border-radius:               5px;
+    border-radius:               6px;
 
 }
 textbox-prompt-colon {
@@ -122,7 +123,7 @@ scrollbar {
 /*****----- Elements -----*****/
 element {
     padding:                     12px 6px;
-    border-radius:               10px;
+    border-radius:               6px;
     background-color:            transparent;
     text-color:                  @text-color;
     cursor:                      pointer;

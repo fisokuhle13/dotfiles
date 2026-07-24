@@ -4,7 +4,7 @@
 
 /* @define-color bg_main #2E3440; */
 
-@define-color bg_main rgba(46, 52, 64, .8);
+@define-color bg_main rgba(46, 52, 64, .96);
 @define-color text_main #D8DEE9;
 @define-color accent #81A1C1;
 @define-color battery_critical rgba(191, 97, 106, 1);

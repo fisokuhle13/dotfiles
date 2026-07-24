@@ -10,7 +10,7 @@ local browser = "zen-browser"
 local fileManager = "nautilus"
 local menu = "rofi -show drun"
 local wallpaper = "waypaper"
-local wifi = "~/dotfiles/global/scripts/network.sh"
+local wifi = "~/dotfiles/src/scripts/network.sh"
 
 -------------------
 -- LOCK / SYSTEM --
@@ -26,7 +26,7 @@ hl.bind(mainMod .. " + CTRL + E", hl.dsp.exec_cmd("rofimoji --action copy"))
 -------------
 
 hl.bind(mainMod .. " + R",
-    hl.dsp.exec_cmd("~/dotfiles/global/scripts/bookworm.sh"))
+    hl.dsp.exec_cmd("~/dotfiles/src/scripts/bookworm.sh"))
 
 hl.bind(mainMod .. " + CTRL + B",
     hl.dsp.exec_cmd("~/.config/waybar/scripts/switch-theme.sh"))
@@ -35,13 +35,13 @@ hl.bind(mainMod .. " + SHIFT + B",
     hl.dsp.exec_cmd("~/.config/waybar/scripts/switch-bar.sh"))
 
 hl.bind(mainMod .. " + T",
-    hl.dsp.exec_cmd("~/dotfiles/global/scripts/update-settings-and-switch.sh"))
+    hl.dsp.exec_cmd("~/dotfiles/src/scripts/update-settings-and-switch.sh"))
 
 hl.bind(mainMod .. " + V",
-    hl.dsp.exec_cmd("~/dotfiles/global/scripts/clipboard-history.sh"))
+    hl.dsp.exec_cmd("~/dotfiles/src/scripts/clipboard-history.sh"))
 
 hl.bind(mainMod .. " + PRINT",
-    hl.dsp.exec_cmd("~/dotfiles/global/scripts/screenshot.sh"))
+    hl.dsp.exec_cmd("~/dotfiles/src/scripts/screenshot.sh"))
 
 ----------------
 -- APPLICATIONS
@@ -109,6 +109,7 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + SHIFT + " .. key,
         hl.dsp.window.move({ workspace = i }))
 end
+
 
 -------------------------
 -- SPECIAL WORKSPACE  --
