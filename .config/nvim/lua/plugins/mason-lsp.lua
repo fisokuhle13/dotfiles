@@ -29,6 +29,8 @@ return {
                     "vtsls",
                     "ts_ls",
                     "kotlin_language_server",
+                    "kotlin_lsp",
+                    "ols",
                 },
             })
         end,
@@ -163,7 +165,6 @@ return {
                 end,
             })
 
-            vim.lsp.enable("kotlin_language_server")
 
             vim.lsp.enable({
                 "lua_ls",
@@ -182,7 +183,9 @@ return {
                 "vue_ls",
                 "vtsls",
                 "ts_ls",
+                "kotlin_lsp",
                 "kotlin_language_server",
+                "ols",
             })
         end,
     },

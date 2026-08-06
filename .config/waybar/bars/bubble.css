@@ -30,7 +30,7 @@ window#waybar.hidden {
  * ----------------------------------------------------- */
 #workspaces {
     background: transparent;
-    margin: 0px 0px 0px 6px;
+    margin: 0px 0px 0px 0px;
     padding: 0;
     /* border-right: 1px solid rgba(205, 214, 244, 0.12); */
 }
@@ -57,9 +57,14 @@ button {
 }
 
 #workspaces button:hover {
-    background: rgba(205, 214, 244, 0.12);
-    color: #1e1e2e;
+    background: transparent;
+    color: @text-color;
 }
+
+#workspaces button.active:hover {
+    background: @accent;
+}
+
 
 /* #workspaces button.urgent { */
 /*     background: #f38ba8; */
@@ -88,20 +93,11 @@ button {
 #battery,
 #power-profiles-daemon,
 #tray {
-    margin: 2px 6px;
-    padding: 0 4px;
+    margin: 2px 0;
     color: @text_main;
-    min-width: 22px;
-}
-
-#cpu,
-#memory,
-#pulseaudio,
-#battery,
-#tray,
-#power-profiles-daemon {
     border-right: 1px solid rgba(205, 214, 244, 0.12);
-    padding-right: 10px;
+
+    padding: 0 12px;
 }
 
 #tray {
@@ -111,8 +107,8 @@ button {
 }
 
 #clock {
-    margin: 2px 4px 2px 4px;
-    padding: 0 4px 0 10px;
+    margin: 2px 4px 2px 8px;
+    padding: 0 4px 0 4px;
     color: @accent;
 }
 
@@ -129,10 +125,9 @@ button {
     color: @battery_critical;
 }
 
-/* Power profile indicator */
 #power-profiles-daemon {
-    min-width: 28px;
     color: @text_main;
+    padding-right: 2px;
 }
 
 #taskbar {
@@ -147,6 +142,15 @@ button {
 
 #taskbar button:hover {
     background-color: transparent;
+}
+
+#custom-first-icon {
+    color: @accent;
+    margin-left: 14px;
+    padding-right: 4px;
+    font-size: 1rem;
+
+    border-right: 1px solid rgba(205, 214, 244, 0.12);
 }
 
 

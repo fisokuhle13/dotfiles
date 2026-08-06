@@ -1,1 +1,1 @@
-/home/projectblack/dotfiles/.config/hypr/conf/hypr-border/gruvbox.lua
+/home/projectblack/dotfiles/.config/hypr/conf/hypr-border/monochrome.lua

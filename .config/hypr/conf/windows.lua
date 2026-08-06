@@ -2,33 +2,6 @@
 ---- WINDOWS / WORKSPACES ----
 -------------------------------
 
--- Global behavior rules
-hl.window_rule({
-    name = "suppress-maximize-events",
-    match = { class = ".*" },
-    suppress_event = "maximize",
-})
-
-hl.window_rule({
-    name = "fix-xwayland-drags",
-    match = {
-        xwayland = true,
-        float = true,
-    },
-    no_focus = true,
-})
-
-hl.window_rule({
-    name = "hyprland-run-move",
-    match = { class = "hyprland-run" },
-    move = "20 monitor_h-120",
-    float = true,
-})
-
--------------------
--- FLOAT APPS
--------------------
-
 local function float_app(name, opts)
     opts = opts or {}
     hl.window_rule({
@@ -65,30 +38,7 @@ float_app("blueman", {
     center = true,
 })
 
--- nwg-look
-float_app("nwg-look", {
-    class = "^nwg-look$",
-    size = { 700, 600 },
-    move = "10% 20%",
-    pin = true,
-})
 
--- Mission Center
-float_app("missioncenter", {
-    class = "^io\\.missioncenter\\.MissionCenter$",
-    size = { 900, 600 },
-    center = true,
-    pin = true,
-})
-
-hl.window_rule({
-    name = "missioncenter-preferences",
-    match = {
-        class = "^missioncenter$",
-        title = "^Preferences$",
-    },
-    float = true,
-})
 
 -- Calculator + Calendar
 float_app("calculator", {
@@ -134,29 +84,7 @@ hl.window_rule({
     opacity = "0.9 0.9",
 })
 
--------------------
--- ENVIRONMENT
--------------------
-
-hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
-hl.env("XDG_SESSION_TYPE", "wayland")
-hl.env("XDG_SESSION_DESKTOP", "Hyprland")
-
--- Qt
-hl.env("QT_QPA_PLATFORM", "wayland;xcb")
-hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
-hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
-hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
-
--- GTK / GDK
-hl.env("GDK_SCALE", "1")
-hl.env("GDK_BACKEND", "wayland,x11,*")
-hl.env("CLUTTER_BACKEND", "wayland")
-
--- Mozilla / Electron
-hl.env("MOZ_ENABLE_WAYLAND", "1")
-hl.env("OZONE_PLATFORM", "wayland")
-hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
-
--- Cursor
-hl.env("XCURSOR_SIZE", "24")
+hl.window_rule({
+    match = { class = "kanri" },
+    decorate = false,
+})

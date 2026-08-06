@@ -12,6 +12,7 @@
         "./modules.json",
     ],
     "modules-left": [
+        "custom/first-icon",
         "hyprland/workspaces",
         "tray",
         "wlr/taskbar",

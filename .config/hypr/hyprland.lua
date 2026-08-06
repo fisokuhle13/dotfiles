@@ -1,11 +1,3 @@
---  ENVIRONMENT VARIABLES --
-hl.env("_JAVA_AWT_WM_NONEREPARENTING", "1")
-hl.env("XWAYLAND_NO_GLAMOR", "1")
-hl.env("GDK_BACKEND", "wayland,x11")
-hl.env("QT_QPA_PLATFORM", "wayland;xcb")
-hl.env("SDL_VIDEODRIVER", "wayland")
-hl.env("GLFW_IMPLICIT_X11", "0")
-
 -- Load configs
 require("conf.autostart")
 require("conf.keybindings")
@@ -34,17 +26,18 @@ hl.config({
 ---------------
 hl.config({
     input = {
-        kb_layout    = "us",
-        kb_variant   = "",
-        kb_model     = "",
-        kb_options   = "",
-        kb_rules     = "",
+        kb_layout     = "us",
+        kb_variant    = "",
+        kb_model      = "",
+        kb_options    = "",
+        kb_rules      = "",
 
-        follow_mouse = 1,
+        follow_mouse  = 1,
+        mouse_refocus = true,
 
-        sensitivity  = 0, -- -1.0 - 1.0, 0 means no modification.
+        sensitivity   = 0, -- -1.0 - 1.0, 0 means no modification.
 
-        touchpad     = {
+        touchpad      = {
             natural_scroll = false,
         },
     },

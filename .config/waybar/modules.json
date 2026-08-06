@@ -37,7 +37,7 @@
     },
     // Clock
     "clock": {
-        "format": "{:%H:%M %a}",
+        "format": "󰃰 {:%H:%M %a}",
         "on-click": "gnome-calendar",
         "timezone": "",
         "tooltip": false
@@ -175,5 +175,11 @@
             ""
         ],
         "scroll-step": 1
+    },
+    // Custom
+    "custom/first-icon": {
+        "format": "󰣇 ",
+        "tooltip": false,
+        "onclick": "kitty"
     }
 }
